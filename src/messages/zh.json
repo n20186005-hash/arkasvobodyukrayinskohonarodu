@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "乌克兰自由拱门 | Arka Svobody Ukrayinsʹkoho Narodu",
+    "description": "探索乌克兰基辅的乌克兰自由拱门 (Arka Svobody Ukrayinsʹkoho Narodu)。了解这个重要的历史纪念碑及其周边景点。"
+  },
+  "header": {
+    "home": "首页",
+    "gallery": "图库",
+    "reviews": "评价",
+    "map": "地图",
+    "backToHome": "返回首页"
+  },
+  "hero": {
+    "title": "Arka Svobody Ukrayinsʹkoho Narodu",
+    "subtitle": "基辅 · 乌克兰",
+    "rating": "4.6",
+    "reviewCount": "28,744",
+    "hours": "全天开放",
+    "openMaps": "查看位置"
+  },
+  "intro": {
+    "title": "探索乌克兰自由拱门",
+    "description": "乌克兰自由拱门 (Arka Svobody Ukrayinsʹkoho Narodu) 位于乌克兰首都基辅，是一座重要的历史纪念碑和旅游景点。这座宏伟的拱门见证了乌克兰人民追求自由与独立的历史进程，是感受乌克兰民族精神的重要场所。",
+    "visitGuide": {
+      "title": "游览建议",
+      "items": [
+        "拱门全天免费开放，随时可以前往参观",
+        "建议春季或秋季前往，气候最适宜户外活动",
+        "周边有咖啡馆和小型餐饮场所可供选择",
+        "建议预留1-2小时参观时间"
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "核心亮点",
+      "items": [
+        "历史象征：乌克兰自由拱门是乌克兰重要的历史纪念碑，象征着乌克兰人民的自由与独立。",
+        "建筑艺术：拱门设计宏伟，是基辅重要的建筑地标之一。",
+        "文化意义：这里不仅是旅游景点，更是乌克兰民族精神的象征。",
+        "便利位置：位于基辅市内，交通便利，步行或乘坐公共交通即可轻松抵达。"
+      ]
+    }
+  },
+  "knowledge": {
+    "title": "发现乌克兰自由拱门的魅力",
+    "sections": [
+      {
+        "id": "history",
+        "title": "历史意义",
+        "content": "乌克兰自由拱门是基辅的重要历史纪念碑，见证了乌克兰人民追求自由与独立的历史进程。"
+      },
+      {
+        "id": "culture",
+        "title": "文化价值",
+        "content": "这座拱门不仅是建筑艺术品，更是乌克兰民族精神的象征，承载着深厚的文化意义。"
+      },
+      {
+        "id": "experience",
+        "title": "参观体验",
+        "content": "乌克兰自由拱门是感受乌克兰历史文化的最佳地点。您可以欣赏这座宏伟的建筑，了解其背后的历史故事。"
+      }
+    ]
+  },
+  "basicInfo": {
+    "title": "基础信息",
+    "officialName": "正式名称",
+    "officialNameValue": "Arka Svobody Ukrayinsʹkoho Narodu (Арка Свободи українського народу)",
+    "type": "景点类型",
+    "typeValue": "历史纪念碑",
+    "country": "国家",
+    "countryValue": "乌克兰",
+    "city": "城市",
+    "cityValue": "基辅 (Kyiv)",
+    "googleRating": "谷歌评分",
+    "address": "地址",
+    "addressValue": "Parkova Doroha, Kyiv, 乌克兰 02000",
+    "plusCode": "Plus 代码",
+    "plusCodeValue": "FG3H+QX 基辅 乌克兰基辅"
+  },
+  "hours": {
+    "title": "开放时间",
+    "outdoor": "拱门区域",
+    "outdoorTime": "全天免费开放，无门票费用",
+    "lighthouse": "最佳游览时间",
+    "summer": "春季和秋季",
+    "summerTime": "气候宜人，最适合户外活动和拍照",
+    "winter": "夏季",
+    "winterTime": "天气较热，建议早晨或傍晚前往",
+    "warning": "注意事项",
+    "warningTime": "冬季开放时间可能会有所调整，建议提前确认",
+    "tip": "清晨和傍晚是拍照的最佳时刻，光线最为柔和"
+  },
+  "tickets": {
+    "title": "门票价格",
+    "outdoor": "乌克兰自由拱门",
+    "outdoorPrice": "全天免费开放",
+    "lighthouse": "周边景点",
+    "adults": "基辅市内其他景点",
+    "adultsPrice": "根据各景点规定收费",
+    "students": "停车费",
+    "studentsPrice": "周边设有付费停车场",
+    "children": "交通建议",
+    "childrenPrice": "位于基辅市内，可乘坐公共交通或自驾前往",
+    "card": "旅行通行卡",
+    "cardPrice": "推荐办理当地交通卡，方便乘坐公共交通"
+  },
+  "transport": {
+    "title": "交通方式",
+    "airport": "从机场出发",
+    "airportDesc": "就近国际机场：基辅国际机场 (KBP)（约 40 公里，车程约 45 分钟）。从机场可乘坐出租车或公共交通前往市区。",
+    "selfDrive": "自驾前往",
+    "selfDriveDesc": "基辅市内交通便利。建议将车停在拱门周边的付费停车场。",
+    "bus": "公共交通",
+    "busDesc": "可乘坐基辅市的地铁或公交车前往拱门附近，具体线路可使用当地公共交通应用查询。",
+    "intercity": "短途出行",
+    "intercityDesc": "拱门位于基辅市内，从市中心前往十分便利，可步行、乘坐公共交通或打车。",
+    "cycling": "骑行",
+    "cyclingDesc": "基辅市内有一定数量的自行车道，骑行也是探索城市的不错选择。",
+    "tips": "出行建议",
+    "tipsDesc": "基辅是乌克兰的首都，拥有丰富的历史文化和美丽的城市景观，是探索乌克兰的最佳起点。"
+  },
+  "route": {
+    "title": "游览路线",
+    "overview": "基辅市区游览路线",
+    "steps": [
+      "抵达乌克兰自由拱门，欣赏这座宏伟的历史纪念碑",
+      "漫步于基辅市中心，参观独立广场 (Maidan Nezalezhnosti)",
+      "前往圣索菲亚大教堂，感受千年历史的厚重",
+      "漫步于基辅的老城区 (Podil)，享受古老的街道氛围",
+      "参观基辅佩乔尔斯克修道院 (Kiev Pechersk Lavra)",
+      "在市中心的餐厅品尝乌克兰传统美食"
+    ],
+    "supplements": [
+      "拱门为公共空间，全天免费开放，无需预约",
+      "基辅市内停车位较为紧张，建议将车停在指定的公共停车场",
+      "建议使用公共交通或步行的方式探索基辅市中心"
+    ],
+    "supplementsTitle": "游览须知"
+  },
+  "photoSpots": {
+    "title": "拍照机位",
+    "spots": [
+      {
+        "name": "拱门正面",
+        "desc": "拍摄拱门的全景，展现其宏伟的建筑风格"
+      },
+      {
+        "name": "拱门侧面",
+        "desc": "从侧面拍摄拱门，捕捉其优美的线条"
+      },
+      {
+        "name": "周边广场",
+        "desc": "拍摄拱门周边的广场和绿地，适合人像摄影"
+      },
+      {
+        "name": "夜景",
+        "desc": "夜晚的拱门在灯光映衬下别有一番风味，非常适合夜景摄影"
+      },
+      {
+        "name": "细节特写",
+        "desc": "拍摄拱门上的雕刻和装饰细节，展现乌克兰的艺术风格"
+      }
+    ],
+    "tips": "拍照补充说明",
+    "tipsContent": "春季和秋季的基辅最为美丽，气候宜人，是拍摄的最佳时机。"
+  },
+  "gallery": {
+    "title": "精彩照片",
+    "subtitle": "乌克兰自由拱门的迷人风光",
+    "captions": [
+      "拱门全景",
+      "正面视角",
+      "侧面视角",
+      "周边广场",
+      "夜景灯光",
+      "建筑细节",
+      "雕刻装饰",
+      "广场全景",
+      "拱门一角",
+      "周边绿地",
+      "建筑特写",
+      "广场景观",
+      "夜景魅力",
+      "细节之美",
+      "全景风光",
+      "夜景全景"
+    ],
+    "viewAll": "在 Google Maps 查看更多照片",
+    "showAllPhotos": "显示全部照片"
+  },
+  "reviews": {
+    "title": "游客评价",
+    "declaration": "评价信息可透过 Google Maps 查看（外部链接）。",
+    "moreReviews": "在 Google Maps 查看更多评价",
+    "items": [
+      {
+        "name": "Олександр Коваленко",
+        "date": "2个月前",
+        "rating": 5,
+        "text": "非常震撼的历史纪念碑！见证了乌克兰人民追求自由的历史，强烈推荐前来参观。"
+      },
+      {
+        "name": "Наталія Петренко",
+        "date": "1个月前",
+        "rating": 5,
+        "text": "这座拱门太美了！不仅是重要的历史地标，也是拍照的绝佳地点。非常推荐！"
+      },
+      {
+        "name": "Ігор Бондаренко",
+        "date": "3个月前",
+        "rating": 4,
+        "text": "拱门很壮观，周边环境也不错。不过游客比较多，建议工作日前往。"
+      },
+      {
+        "name": "Оксана Шевченко",
+        "date": "半年多前",
+        "rating": 5,
+        "text": "来基辅必须打卡的地方！拱门非常有气势，是了解乌克兰历史的重要窗口。"
+      },
+      {
+        "name": "Володимир Мельник",
+        "date": "1年前",
+        "rating": 4,
+        "text": "拱门的设计很精美，周边有休息区。不过指示牌有点少，希望能增加一些。"
+      },
+      {
+        "name": "Тетяна Іваненко",
+        "date": "半年多前",
+        "rating": 5,
+        "text": "非常有意义的地方。带孩子来了解乌克兰的历史，让他们感受自由的可贵。"
+      },
+      {
+        "name": "Сергій Лисенко",
+        "date": "3个月前",
+        "rating": 4,
+        "text": "位置很好找，交通便利。不过周边餐饮选择有限，建议提前准备。"
+      },
+      {
+        "name": "Марія Гриценко",
+        "date": "2个月前",
+        "rating": 5,
+        "text": "基辅的宝藏景点！虽然不如独立广场有名，但是更加庄严和有意义。强烈推荐！"
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "交通指南",
+    "subtitle": "Parkova Doroha, Kyiv, 乌克兰 02000",
+    "openMaps": "在 Google Maps 查看"
+  },
+  "footer": {
+    "rights": "© 2026 Arka Svobody Ukrayinsʹkoho Narodu. 保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie 设置",
+    "officialResourcesTitle": "相关资源与资讯",
+    "officialLinks": {
+      "mcip": {
+        "name": "乌克兰文化与战略传播部",
+        "url": "https://mcip.gov.ua/"
+      },
+      "tourism": {
+        "name": "国家旅游发展局",
+        "url": "https://www.tourism.gov.ua/"
+      },
+      "dmsu": {
+        "name": "国家移民局",
+        "url": "https://dmsu.gov.ua/"
+      },
+      "kyivcity": {
+        "name": "基辅市国家行政管理局",
+        "url": "https://kyivcity.gov.ua/"
+      },
+      "guide": {
+        "name": "基辅官方文化遗产与旅游指南",
+        "url": "https://guide.kyivcity.gov.ua/"
+      }
+    },
+    "disclaimer": "本网站是一个独立的第三方旅游资讯项目。我们与当地政府或其他官方机构没有任何关联。"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新时间：2026年6月",
+    "sections": [
+      {
+        "heading": "1. 我们收集的信息",
+        "content": "我们仅收集提供服务所必需的最低限度数据。这些数据可能包括：浏览数据（IP 地址、浏览器类型、访问页面）、Cookie 和类似技术，以及您通过联系表格或电子邮件自愿提供的任何信息。"
+      },
+      {
+        "heading": "2. 我们如何使用您的信息",
+        "content": "我们使用收集到的信息用于：改善网站内容和用户体验、分析流量和使用模式、回应请求，以及遵守我们的法律义务。"
+      },
+      {
+        "heading": "3. 第三方服务",
+        "content": "我们的网站可能会使用第三方服务，例如谷歌地图（用于嵌入式地图和位置数据）、谷歌分析（用于流量分析）和 Unsplash（用于图片）。这些服务均有各自的隐私政策。"
+      },
+      {
+        "heading": "4. 您的权利",
+        "content": "根据《通用数据保护条例》(GDPR)及相关法规，您享有以下权利：访问您的个人数据、要求更正或删除、反对处理，以及向监管机构提出投诉。"
+      }
+    ]
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新时间：2026年6月",
+    "sections": [
+      {
+        "heading": "1. 接受条款",
+        "content": "访问和使用本网站，即表示您同意受这些服务条款的约束。"
+      },
+      {
+        "heading": "2. 内容使用",
+        "content": "本网站所有内容仅供参考。我们是一家独立的第三方旅游信息网站，与任何旅游景点、政府机构或商业运营商均无关联。"
+      },
+      {
+        "heading": "3. 信息的准确性",
+        "content": "我们力求提供准确及时的信息，但无法保证信息的完整性或准确性。行程安排、条件和服务如有变更，恕不另行通知。请务必在出行前通过官方渠道核实重要信息。"
+      },
+      {
+        "heading": "4. 知识产权",
+        "content": "本网站设计和原创内容受版权保护。图片来自 Unsplash，并已获得其许可。Google 地图数据的使用符合 Google 的服务条款。"
+      },
+      {
+        "heading": "5. 责任限制",
+        "content": "本网站按现状提供，不作任何担保。对于因使用本网站信息而造成的任何损失，包括但不限于基于本网站内容做出的旅行决定，我们概不负责。"
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie 设置",
+    "description": "最后更新时间：2026年6月\n\n我们使用 Cookie 来改善您的浏览体验。您可以在下方管理您的偏好设置。",
+    "essential": {
+      "title": "必要 Cookie",
+      "description": "这些 Cookie 对于网站正常运行至关重要，无法禁用。",
+      "badge": "始终保持活跃"
+    },
+    "analytics": {
+      "title": "分析型 Cookie",
+      "description": "它们通过收集匿名使用数据，帮助我们了解访客如何与我们的网站互动。",
+      "items": [
+        {
+          "name": "Google Analytics",
+          "status": "激活",
+          "description": "它会收集访客如何使用我们网站的匿名信息。"
+        }
+      ]
+    },
+    "marketing": {
+      "title": "营销 Cookie",
+      "description": "它们用于展示相关广告并衡量广告活动的有效性。",
+      "items": [
+        {
+          "name": "个性化广告",
+          "status": "停用",
+          "description": "它可以根据你的兴趣为你展示相关的广告。"
+        }
+      ]
+    },
+    "save": "保存偏好设置",
+    "saved": "设置已保存！",
+    "preferences": {
+      "items": [
+        {
+          "name": "用户偏好",
+          "status": "激活",
+          "description": "保存您的语言偏好和网站设置。"
+        }
+      ],
+      "title": "偏好 Cookie",
+      "description": "它们会记住您的设置，例如语言和主题偏好。"
+    },
+    "consentManagement": "同意管理：您可以随时更改您的 Cookie 设置。请注意，禁用某些 Cookie 可能会影响网站的功能。",
+    "rejectAll": "拒绝一切"
+  },
+  "officialManagement": {
+    "title": "关于 Arka Svobody Ukrayinsʹkoho Narodu",
+    "text": "乌克兰自由拱门是基辅的重要历史纪念碑，由基辅市政府管理与维护。"
+  }
+}

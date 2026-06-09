@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "Arka Svobody Ukrayinsʹkoho Narodu | Kyiv, Ukraine",
+    "description": "Explore the complete guide to Arka Svobody Ukrayinsʹkoho Narodu in Kyiv, Ukraine. Discover this important historical monument and its surrounding attractions."
+  },
+  "header": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "hero": {
+    "title": "Arka Svobody Ukrayinsʹkoho Narodu",
+    "subtitle": "Kyiv · Ukraine",
+    "rating": "4.6",
+    "reviewCount": "28,744",
+    "hours": "Open 24 Hours",
+    "openMaps": "View Location"
+  },
+  "intro": {
+    "title": "Explore Arka Svobody Ukrayinsʹkoho Narodu",
+    "description": "Arka Svobody Ukrayinsʹkoho Narodu is located in Kyiv, the capital of Ukraine. It is an important historical monument and tourist attraction. This magnificent arch witnessed the historical process of the Ukrainian people's pursuit of freedom and independence, and is an important place to feel the Ukrainian national spirit.",
+    "visitGuide": {
+      "title": "Visiting Tips",
+      "items": [
+        "Free and open all day, visit anytime",
+        "Spring or autumn is recommended for the most pleasant weather",
+        "Cafes and small dining options nearby",
+        "Recommended visiting time: 1-2 hours"
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "Historical Symbol: Arka Svobody Ukrayinsʹkoho Narodu is an important historical monument in Ukraine, symbolizing the freedom and independence of the Ukrainian people.",
+        "Architectural Art: The arch has a magnificent design and is one of the important architectural landmarks in Kyiv.",
+        "Cultural Significance: This is not only a tourist attraction, but also a symbol of the Ukrainian national spirit.",
+        "Convenient Location: Located within Kyiv city, easily accessible by walking or public transportation."
+      ]
+    }
+  },
+  "knowledge": {
+    "title": "Discover the Charm of Arka Svobody Ukrayinsʹkoho Narodu",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Historical Significance",
+        "content": "Arka Svobody Ukrayinsʹkoho Narodu is an important historical monument in Kyiv, witnessing the historical process of the Ukrainian people's pursuit of freedom and independence."
+      },
+      {
+        "id": "culture",
+        "title": "Cultural Value",
+        "content": "This arch is not only an architectural artwork, but also a symbol of the Ukrainian national spirit, carrying profound cultural significance."
+      },
+      {
+        "id": "experience",
+        "title": "Visiting Experience",
+        "content": "Arka Svobody Ukrayinsʹkoho Narodu is the best place to experience Ukrainian history and culture. You can admire this magnificent building and learn about the historical stories behind it."
+      }
+    ]
+  },
+  "basicInfo": {
+    "title": "Basic Information",
+    "officialName": "Official Name",
+    "officialNameValue": "Arka Svobody Ukrayinsʹkoho Narodu (Арка Свободи українського народу)",
+    "type": "Attraction Type",
+    "typeValue": "Historical Monument",
+    "country": "Country",
+    "countryValue": "Ukraine",
+    "city": "City",
+    "cityValue": "Kyiv",
+    "googleRating": "Google Rating",
+    "address": "Address",
+    "addressValue": "Parkova Doroha, Kyiv, Ukraine 02000",
+    "plusCode": "Plus Code",
+    "plusCodeValue": "FG3H+QX Kyiv, Ukraine"
+  },
+  "hours": {
+    "title": "Opening Hours",
+    "outdoor": "Arch Area",
+    "outdoorTime": "Free and open all day, no admission fee",
+    "lighthouse": "Best Time to Visit",
+    "summer": "Spring and Autumn",
+    "summerTime": "Pleasant climate, most suitable for outdoor activities and photography",
+    "winter": "Summer",
+    "winterTime": "Hot weather, early morning or late afternoon recommended",
+    "warning": "Notes",
+    "warningTime": "Winter opening hours may be adjusted, please confirm in advance",
+    "tip": "Early mornings and late afternoons are the best moments for photography, with the softest light"
+  },
+  "tickets": {
+    "title": "Ticket Information",
+    "outdoor": "Arka Svobody Ukrayinsʹkoho Narodu",
+    "outdoorPrice": "Free all day",
+    "lighthouse": "Nearby Attractions",
+    "adults": "Other Attractions in Kyiv",
+    "adultsPrice": "Fees apply according to each attraction's rules",
+    "students": "Parking Fees",
+    "studentsPrice": "Paid parking available near the arch",
+    "children": "Transport Tip",
+    "childrenPrice": "Located in Kyiv city, accessible by public transport or driving",
+    "card": "Travel Pass",
+    "cardPrice": "Recommended to get a local transport card for convenient public transport"
+  },
+  "transport": {
+    "title": "Transportation",
+    "airport": "From the Airport",
+    "airportDesc": "Nearest airport: Kyiv International Airport (KBP) (approx. 40 km, 45 minutes drive). From the airport, you can take a taxi or public transport to the city center.",
+    "selfDrive": "Driving",
+    "selfDriveDesc": "Kyiv has convenient transportation within the city. It is recommended to park in paid parking lots around the arch.",
+    "bus": "Public Transport",
+    "busDesc": "You can take Kyiv's metro or buses to near the arch. Please check local public transport apps for specific routes.",
+    "intercity": "Short-Distance Travel",
+    "intercityDesc": "The arch is located within Kyiv city, very convenient to access from the city center by walking, public transport, or taxi.",
+    "cycling": "Cycling",
+    "cyclingDesc": "Kyiv has a certain number of bicycle lanes, and cycling is also a good choice for exploring the city.",
+    "tips": "Travel Tips",
+    "tipsDesc": "Kyiv is the capital of Ukraine, with rich historical culture and beautiful urban landscapes, making it an ideal starting point for exploring Ukraine."
+  },
+  "route": {
+    "title": "Visiting Route",
+    "overview": "Kyiv City Walking Route",
+    "steps": [
+      "Arrive at Arka Svobody Ukrayinsʹkoho Narodu and admire this magnificent historical monument",
+      "Stroll along central Kyiv and visit Independence Square (Maidan Nezalezhnosti)",
+      "Head to St. Sophia's Cathedral and feel the weight of thousand-year history",
+      "Walk along Kyiv's old town (Podil) and enjoy the atmosphere of ancient streets",
+      "Visit Kyiv Pechersk Lavra (Kiev Pechersk Lavra)",
+      "Taste traditional Ukrainian cuisine at restaurants in the city center"
+    ],
+    "supplements": [
+      "The arch is a public space, free and open all day, no reservations needed",
+      "Parking in Kyiv city is limited, it is recommended to park in designated public parking lots",
+      "It is recommended to explore central Kyiv on foot or by public transport"
+    ],
+    "supplementsTitle": "Visiting Notes"
+  },
+  "photoSpots": {
+    "title": "Photo Spots",
+    "spots": [
+      {
+        "name": "Arch Front",
+        "desc": "Capture the panoramic view of the arch, showing its magnificent architectural style"
+      },
+      {
+        "name": "Arch Side",
+        "desc": "Capture the arch from the side, capturing its beautiful lines"
+      },
+      {
+        "name": "Surrounding Square",
+        "desc": "Capture the square and green space around the arch, suitable for portrait photography"
+      },
+      {
+        "name": "Night View",
+        "desc": "The arch at night has a special charm under the lights, perfect for night photography"
+      },
+      {
+        "name": "Detail Close-up",
+        "desc": "Capture the carvings and decorative details on the arch, showcasing Ukrainian artistic style"
+      }
+    ],
+    "tips": "Photography Tips",
+    "tipsContent": "Spring and autumn in Kyiv are the most beautiful seasons, with pleasant climate, making them the best timing for photography."
+  },
+  "gallery": {
+    "title": "Stunning Photos",
+    "subtitle": "Charming Scenery of Arka Svobody Ukrayinsʹkoho Narodu",
+    "captions": [
+      "Arch Panorama",
+      "Front View",
+      "Side View",
+      "Surrounding Square",
+      "Night Lights",
+      "Architectural Details",
+      "Carvings and Decorations",
+      "Square Panorama",
+      "Arch Corner",
+      "Surrounding Green Space",
+      "Architectural Close-up",
+      "Square Landscape",
+      "Night Charm",
+      "Beauty of Details",
+      "Panoramic Scenery",
+      "Night Panorama"
+    ],
+    "viewAll": "View more photos on Google Maps",
+    "showAllPhotos": "Show All Photos"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Review information can be viewed via Google Maps (external link).",
+    "moreReviews": "View More Reviews on Google Maps",
+    "items": [
+      {
+        "name": "Oleksandr Kovalenko",
+        "date": "2 months ago",
+        "rating": 5,
+        "text": "A very震撼 historical monument! It witnessed the history of the Ukrainian people's pursuit of freedom. Strongly recommended!"
+      },
+      {
+        "name": "Nataliia Petrenko",
+        "date": "1 month ago",
+        "rating": 5,
+        "text": "This arch is so beautiful! Not only an important historical landmark, but also a great place for photography. Highly recommended!"
+      },
+      {
+        "name": "Ihor Bondarenko",
+        "date": "3 months ago",
+        "rating": 4,
+        "text": "The arch is spectacular, and the surrounding environment is also good. However, there are many tourists, recommended to visit on weekdays."
+      },
+      {
+        "name": "Oksana Shevchenko",
+        "date": "Over 6 months ago",
+        "rating": 5,
+        "text": "A must-visit place in Kyiv! The arch is very imposing and is an important window to understand Ukrainian history."
+      },
+      {
+        "name": "Volodymyr Melnyk",
+        "date": "1 year ago",
+        "rating": 4,
+        "text": "The design of the arch is very exquisite, with rest areas nearby. However, there are few signposts, hoping to add some."
+      },
+      {
+        "name": "Tetiana Ivanenko",
+        "date": "Over 6 months ago",
+        "rating": 5,
+        "text": "A very meaningful place. Bring children to understand Ukrainian history and let them feel the value of freedom."
+      },
+      {
+        "name": "Serhii Lysenko",
+        "date": "3 months ago",
+        "rating": 4,
+        "text": "The location is easy to find, with convenient transportation. However, there are limited dining options nearby, recommended to prepare in advance."
+      },
+      {
+        "name": "Mariia Hrytsenko",
+        "date": "2 months ago",
+        "rating": 5,
+        "text": "A hidden gem in Kyiv! Although not as famous as Independence Square, it is more solemn and meaningful. Strongly recommended!"
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "Transportation Guide",
+    "subtitle": "Parkova Doroha, Kyiv, Ukraine 02000",
+    "openMaps": "View on Google Maps"
+  },
+  "footer": {
+    "rights": "© 2026 Arka Svobody Ukrayinsʹkoho Narodu. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Related Resources & Information",
+    "officialLinks": {
+      "mcip": {
+        "name": "Ministry of Culture and Strategic Communication",
+        "url": "https://mcip.gov.ua/"
+      },
+      "tourism": {
+        "name": "State Tourism Development Agency",
+        "url": "https://www.tourism.gov.ua/"
+      },
+      "dmsu": {
+        "name": "State Migration Service",
+        "url": "https://dmsu.gov.ua/"
+      },
+      "kyivcity": {
+        "name": "Kyiv City State Administration",
+        "url": "https://kyivcity.gov.ua/"
+      },
+      "guide": {
+        "name": "Kyiv Official Cultural Heritage and Tourism Guide",
+        "url": "https://guide.kyivcity.gov.ua/"
+      }
+    },
+    "disclaimer": "This website is an independent third-party travel information project. We have no affiliation with local government or other official institutions."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Information We Collect",
+        "content": "We only collect the minimum data necessary to provide our services. This data may include: browsing data (IP address, browser type, visited pages), cookies and similar technologies, and any information you voluntarily provide via contact forms or email."
+      },
+      {
+        "heading": "2. How We Use Your Information",
+        "content": "We use the collected information to: improve website content and user experience, analyze traffic and usage patterns, respond to requests, and comply with our legal obligations."
+      },
+      {
+        "heading": "3. Third-Party Services",
+        "content": "Our website may use third-party services such as Google Maps (for embedded maps and location data), Google Analytics (for traffic analysis), and Unsplash (for images). These services have their own privacy policies."
+      },
+      {
+        "heading": "4. Your Rights",
+        "content": "Under the General Data Protection Regulation (GDPR) and related regulations, you have the right to: access your personal data, request correction or deletion, object to processing, and lodge a complaint with a supervisory authority."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: June 2026",
+    "sections": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "content": "By accessing and using this website, you agree to be bound by these terms of service."
+      },
+      {
+        "heading": "2. Use of Content",
+        "content": "All content on this website is for informational purposes only. We are an independent third-party travel information website, not affiliated with any tourist attractions, government agencies, or commercial operators."
+      },
+      {
+        "heading": "3. Accuracy of Information",
+        "content": "We strive to provide accurate and timely information, but we cannot guarantee its completeness or accuracy. Itineraries, conditions, and services are subject to change without notice. Always verify important information through official channels before traveling."
+      },
+      {
+        "heading": "4. Intellectual Property",
+        "content": "The design and original content of this website are protected by copyright. Images are sourced from Unsplash and used under license. The use of Google Maps data complies with Google's terms of service."
+      },
+      {
+        "heading": "5. Limitation of Liability",
+        "content": "This website is provided \"as is\" without any warranties. We are not responsible for any losses resulting from the use of information on this website, including but not limited to travel decisions made based on its content."
+      }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Last Updated: June 2026\n\nWe use cookies to improve your browsing experience. You can manage your preferences below.",
+    "essential": {
+      "title": "Essential Cookies",
+      "description": "These cookies are essential for the website to function properly and cannot be disabled.",
+      "badge": "Always Active"
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "They help us understand how visitors interact with our website by collecting anonymous usage data.",
+      "items": [
+        {
+          "name": "Google Analytics",
+          "status": "Active",
+          "description": "It collects anonymous information about how visitors use our website."
+        }
+      ]
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "They are used to show relevant advertisements and measure the effectiveness of ad campaigns.",
+      "items": [
+        {
+          "name": "Personalized Ads",
+          "status": "Inactive",
+          "description": "It can show you relevant ads based on your interests."
+        }
+      ]
+    },
+    "save": "Save Preferences",
+    "saved": "Settings saved!",
+    "preferences": {
+      "items": [
+        {
+          "name": "User Preferences",
+          "status": "Active",
+          "description": "Saves your language preferences and website settings."
+        }
+      ],
+      "title": "Preference Cookies",
+      "description": "They remember your settings, such as language and theme preferences."
+    },
+    "consentManagement": "Consent Management: You can change your cookie settings at any time. Please note that disabling certain cookies may affect the website's functionality.",
+    "rejectAll": "Reject All"
+  },
+  "officialManagement": {
+    "title": "About Arka Svobody Ukrayinsʹkoho Narodu",
+    "text": "Arka Svobody Ukrayinsʹkoho Narodu is an important historical monument in Kyiv, managed and maintained by the Kyiv City Government."
+  }
+}
