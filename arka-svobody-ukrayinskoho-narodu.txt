@@ -1,0 +1,120 @@
+
+
+
+我们网站是
+arkasvobodyukrayinskohonarodu.com
+检查下有没有错误
+
+
+
+
+arka-svobody-ukrayinskoho-narodu
+
+基辅州	Arka Svobody Ukrayinsʹkoho Narodu
+
+Arka Svobody Ukrayinsʹkoho Narodu
+Арка Свободи українського народу
+4.6(28,744)
+旅游胜地
+Parkova Doroha, Kyiv, 乌克兰02000
+FG3H+QX 基辅 乌克兰基辅
+
+https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+
+表单字段	英文填写（推荐）	中文对照
+国家 / 地区 *	Ukraine	乌克兰
+地址 *	Parkova Doroha	公园路
+地址 2（选填）	Arka Svobody Ukrayinsʹkoho Narodu	乌克兰人民自由拱门
+城市 *	Kyiv	基辅
+省 / 自治区 / 直辖市 *	Kyiv Oblast	基辅州
+邮政编码 *	02000	02000
+
+
+
+
+你正在用（Next.js开发）
+为一个新景点【 Arka Svobody Ukrayinsʹkoho Narodu 】构建静态/Next.js 单页指南网站。
+页面只需要支持中文和英文双语言
+
+基辅州	Arka Svobody Ukrayinsʹkoho Narodu
+
+Arka Svobody Ukrayinsʹkoho Narodu
+Арка Свободи українського народу
+4.6(28,744)
+旅游胜地
+Parkova Doroha, Kyiv, 乌克兰02000
+FG3H+QX 基辅 乌克兰基辅
+
+
+
+https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+
+首屏背景图要引用以下
+C:\Users\Administrator\Documents\GitHub\乌克兰\arka-svobody-ukrayinskoho-narodu\public\gallery\arka-svobody-ukrayinskoho-narodu (1).jpg
+
+删除原先友情链接，新增以下友情链接
+
+乌克兰文化与战略传播部 https://mcip.gov.ua/
+国家旅游发展局 https://www.tourism.gov.ua/
+国家移民局 https://dmsu.gov.ua/
+
+基辅市国家行政管理局
+https://kyivcity.gov.ua/
+
+基辅官方文化遗产与旅游指南
+https://guide.kyivcity.gov.ua/
+
+
+扎波罗热州行政管理委员会 https://www.zoda.gov.ua/
+扎波罗热市议会与市政府 https://zp.gov.ua/
+
+在Google地图上查看位置都跳转为 https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+页面一共四个链接每一个都需要修改
+
+照片画廊
+精彩照片 显示照片不全目前只显示8张，需要有显示完整照片显示功能
+检查照片名称是否正确并修正
+
+删除 探索更多 板块
+
+首屏谷歌地图位置跳转为 https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+照片画廊
+在Google地图上查看位置跳转为 https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+游客评价
+在Google地图上查看位置跳转为 https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+地图位置
+在Google地图上查看位置跳转为 https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+首屏右侧切换中文的时候 网站没转为/zh
+
+
+新增
+
+乌克兰语
+俄语
+
+
+生成一个文件忽略不需要上传的文件
+
+
+基辅州	Arka Svobody Ukrayinsʹkoho Narodu
+
+Arka Svobody Ukrayinsʹkoho Narodu
+Арка Свободи українського народу
+4.6(28,744)
+旅游胜地
+Parkova Doroha, Kyiv, 乌克兰02000
+FG3H+QX 基辅 乌克兰基辅
+
+
+
+https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9
+
+
+单景点买.com域名推荐
+
