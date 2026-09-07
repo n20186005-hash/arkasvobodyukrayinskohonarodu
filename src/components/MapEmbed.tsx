@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { SITE } from '@/lib/seo';
 
 export default function MapEmbed() {
   const t = useTranslations('mapSection');
@@ -25,13 +26,13 @@ export default function MapEmbed() {
             This is for visual cleanliness only. Google's Terms of Service apply.
           */}
           <iframe
-            src="https://maps.google.com/maps?q=Arka+Svobody+Ukrayinskoho+Narodu,+Kyiv,+Ukraine&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src={SITE.mapsEmbedSrc}
             width="100%"
             height="450"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerPolicy="strict-origin-when-cross-origin"
             title="Google Maps - Arka Svobody Ukrayinskoho Narodu"
           />
         </div>
@@ -39,7 +40,7 @@ export default function MapEmbed() {
         {/* Open in Google Maps */}
         <div className="mt-6 flex justify-center">
           <a
-            href="https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9"
+            href={SITE.mapsShareUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium text-white transition-colors"
@@ -50,6 +51,37 @@ export default function MapEmbed() {
               <circle cx="12" cy="10" r="3" />
             </svg>
             {t('openMaps')}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+
+        {/* 地理坐标（实体绑定） */}
+        <div className="mt-8 rounded-xl p-5 text-center" style={{ background: 'var(--bg-tertiary)' }}>
+          <p className="text-sm mb-1" style={{ color: 'var(--text-muted)' }}>
+            {t('coordinatesLabel')}
+          </p>
+          <p className="font-mono text-sm" style={{ color: 'var(--text-primary)' }}>
+            {t('coordinates')}
+          </p>
+        </div>
+
+        {/* 权威出站链接：官方旅游门户 */}
+        <div className="mt-8 text-center">
+          <p className="text-sm mb-2" style={{ color: 'var(--text-muted)' }}>
+            {t('officialLine')}
+          </p>
+          <a
+            href={SITE.officialTourismUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium hover:underline"
+            style={{ color: 'var(--accent)' }}
+          >
+            {t('officialPortal')}
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
               <polyline points="15 3 21 3 21 9" />

@@ -1,8 +1,13 @@
-import { redirect } from 'next/navigation';
+'use client';
 
-// This page only renders when the app is built statically (output: 'export')
-// For dynamic deployments, the middleware will intercept requests to `/`
-// and redirect to the default locale (e.g. `/zh`).
+import { useEffect } from 'react';
+
+// 站点为静态导出（output: 'export'），无服务端运行时；
+// 因此根路径在浏览器端立即跳转到默认语言 /ru。
 export default function RootPage() {
-  redirect('/zh');
+  useEffect(() => {
+    window.location.replace('/ru');
+  }, []);
+
+  return null;
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Kyiv Oblast | Arka Svobody Ukrayinsʹkoho Narodu",
-    "description": "Explore the complete guide to Arka Svobody Ukrayinsʹkoho Narodu in Kyiv, Ukraine. Discover this important historical monument and its surrounding attractions."
+    "title": "Arka Svobody Ukrayinsʹkoho Narodu (Kyiv) - Visitor Guide & Location",
+    "description": "Discover Arka Svobody Ukrayinsʹkoho Narodu, the iconic People's Freedom Arch landmark in Kyiv, Ukraine. View the location map, opening details, nearby Mariinskyi Palace, and travel tips."
   },
   "header": {
     "home": "Home",
@@ -11,15 +11,17 @@
     "backToHome": "Back to Home"
   },
   "hero": {
-    "title": "Arka Svobody Ukrayinsʹkoho Narodu",
-    "subtitle": "Kyiv Oblast · Ukraine",
+    "title": "Arka Svobody Ukrayinsʹkoho Narodu (Kyiv)",
+    "subtitle": "Kyiv, Ukraine · Tourist Attraction",
     "rating": "4.6",
-    "reviewCount": "28,744",
+    "reviewCount": "28,740",
     "hours": "Open 24 Hours",
     "openMaps": "View Location"
   },
   "intro": {
-    "title": "Explore Arka Svobody Ukrayinsʹkoho Narodu",
+    "crumb": "Ukraine › Kyiv › Arka Svobody Ukrayinsʹkoho Narodu",
+    "lead": "Welcome to **Arka Svobody Ukrayinsʹkoho Narodu**, widely recognized as the central **People's Freedom Arch** of Kyiv. Located in the heart of **Kyiv**, **Ukraine**, high above the Dnipro River, this free riverside landmark serves as a primary hub for travelers exploring the capital and a gateway to Mariinskyi Palace, the Kyiv Funicular and the historic Pechersk district.",
+    "title": "About Arka Svobody Ukrayinsʹkoho Narodu",
     "description": "Arka Svobody Ukrayinsʹkoho Narodu is located in Kyiv, the capital of Ukraine. It is an important historical monument and tourist attraction. This magnificent arch witnessed the historical process of the Ukrainian people's pursuit of freedom and independence, and is an important place to feel the Ukrainian national spirit.",
     "visitGuide": {
       "title": "Visiting Tips",
@@ -185,7 +187,11 @@
       "Night Panorama"
     ],
     "viewAll": "View more photos on Google Maps",
-    "showAllPhotos": "Show All Photos"
+    "showAllPhotos": "Show All Photos",
+    "download": "Download original",
+    "credit": "Source: site gallery",
+    "exif": "Public copies are stripped of EXIF (no camera data, time or GPS)",
+    "usage": "Usage note: the gallery is published for learning and trip planning. Metadata (EXIF/GPS) has been removed from the public copies. If you hold rights to any image or would like to add a photographer credit, please contact the site owner. Non-commercial sharing is welcome with a link back to this guide."
   },
   "reviews": {
     "title": "Visitor Reviews",
@@ -196,7 +202,7 @@
         "name": "Oleksandr Kovalenko",
         "date": "2 months ago",
         "rating": 5,
-        "text": "A very震撼 historical monument! It witnessed the history of the Ukrainian people's pursuit of freedom. Strongly recommended!"
+        "text": "A very powerful and impressive historical monument! It witnessed the history of the Ukrainian people's pursuit of freedom. Strongly recommended!"
       },
       {
         "name": "Nataliia Petrenko",
@@ -243,9 +249,13 @@
     ]
   },
   "mapSection": {
-    "title": "Transportation Guide",
-    "subtitle": "Parkova Doroha, Kyiv, Ukraine 02000",
-    "openMaps": "View on Google Maps"
+    "title": "Location & How to Visit People's Freedom Arch in Kyiv",
+    "subtitle": "Parkova Doroha, Kyiv, Ukraine 02000 · Plus Code FG3H+QX",
+    "coordinatesLabel": "GPS Coordinates",
+    "coordinates": "50.4544624° N, 30.5299656° E",
+    "openMaps": "View on Google Maps",
+    "officialLine": "For official updates and regional tourism information, visit",
+    "officialPortal": "Ukraine / Kyiv Official Tourism Portal"
   },
   "footer": {
     "rights": "© 2026 Arka Svobody Ukrayinsʹkoho Narodu. All rights reserved.",
@@ -275,7 +285,8 @@
         "url": "https://guide.kyivcity.gov.ua/"
       }
     },
-    "disclaimer": "This website is an independent third-party travel information project. We have no affiliation with local government or other official institutions."
+    "disclaimer": "This website is an independent third-party travel information project. We have no affiliation with local government or other official institutions.",
+    "imageCredits": "All images displayed on this website are the property of their respective owners, and the copyright of every photo belongs to its original photographer."
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -374,5 +385,449 @@
   "officialManagement": {
     "title": "About Arka Svobody Ukrayinsʹkoho Narodu",
     "text": "Arka Svobody Ukrayinsʹkoho Narodu is an important historical monument in Kyiv, managed and maintained by the Kyiv City Government."
+  },
+  "nearby": {
+    "title": "Landmarks & Attractions Around People's Freedom Arch",
+    "lead": "When visiting **Arka Svobody Ukrayinsʹkoho Narodu**, visitors can easily explore surrounding historical landmarks and points of interest, including **Mariinskyi Palace** and the **Kyiv Funicular**. All of the following sights are within easy walking distance of the arch.",
+    "items": [
+      {
+        "name": "Mariinskyi Palace",
+        "desc": "A rococo palace from the 18th century and the ceremonial residence of the Ukrainian state, about a 10-15 minute walk away through Mariinskyi Park."
+      },
+      {
+        "name": "Mariinskyi Park",
+        "desc": "A historic park on the hillside next to the arch, with shaded paths and panoramic viewpoints over the Dnipro River."
+      },
+      {
+        "name": "Kyiv Funicular & European Square",
+        "desc": "The funicular railway links the upper city with Poshtova Ploshcha on the Dnipro riverfront and is about 10 minutes' walk from the arch."
+      },
+      {
+        "name": "Valeriy Lobanovskyi Dynamo Stadium",
+        "desc": "One of Ukraine's most historic stadiums, located along the same park road only a few minutes away on foot."
+      },
+      {
+        "name": "Kyiv Pechersk Lavra",
+        "desc": "A UNESCO-listed monastery complex founded in the 11th century, about a 30-minute walk south along the Dnipro."
+      },
+      {
+        "name": "Dnipro Riverfront & Viewing Deck",
+        "desc": "From the arch's riverside deck you can enjoy one of Kyiv's best panoramic views over the Dnipro River."
+      }
+    ]
+  },
+  "history": {
+    "title": "History & Significance of Arka Svobody Ukrayinsʹkoho Narodu",
+    "paragraphs": [
+      "The sweeping rainbow-shaped arch was opened on 7 November 1982, when Kyiv celebrated its 1,500th anniversary. It was erected to mark the 60th anniversary of the USSR and the 1654 Pereiaslav agreement, and was originally known as the People's Friendship Arch (Ukrainian: Арка дружби народів). The composition was designed by sculptor Oleksandr Skoblikov together with architects Serhiy Myrhorodsky, Kostiantyn Sydorov and I. Ivanov.",
+      "For four decades the monument symbolized the idea of friendship between the Ukrainian and Russian peoples: beneath the arch stood a bronze sculpture group and a granite stele decorated with the Order of Friendship of Peoples. In April 2022 the Soviet-era bronze composition was dismantled, and the Kyiv authorities renamed the monument Arka Svobody Ukrayinsʹkoho Narodu - the Arch of Freedom of the Ukrainian People.",
+      "Today the towering metal arc, rising about 35 metres (115 ft) above the Dnipro riverfront in Khreshchatyi Park, is widely read as a symbol of Ukrainian freedom and independence. It remains free to visit around the clock and is one of the most photographed landmarks in Kyiv."
+    ],
+    "factsTitle": "Key facts",
+    "facts": [
+      "Opened on 7 November 1982 during the 1,500th anniversary celebrations of Kyiv",
+      "Original name: People's Friendship Arch",
+      "Height: about 35 metres (115 ft)",
+      "Location: Khreshchatyi Park, Parkova Doroha, Kyiv",
+      "Renamed in April 2022 to Arka Svobody Ukrayinsʹkoho Narodu"
+    ],
+    "quote1": "It was not built as a monument to a friendship between equals: it opened in 1982 within the commemorative context of the USSR’s 60th anniversary, promoting the official “friendship of Soviet peoples” narrative of that era.",
+    "quote2": "The 2022 renaming did not erase history — it renamed it. The arch turned from celebrating the old union toward marking the freedom of the Ukrainian people.",
+    "fig1Caption": "Today's view: the silver arch on the high right bank of the Dnipro",
+    "fig2Caption": "Structural detail: titanium-alloy cladding over the metal framework (recent site-archive photo)",
+    "photoNote": "Photos in this section are recent site-archive images shown to explain the current look and location; they are not historical photos. Notes about archival image rights appear in the “Timeline & old photos” block below."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "note": "Quick answers about the location, access and history of People's Freedom Arch.",
+    "items": [
+      {
+        "q": "Where is Arka Svobody Ukrayinsʹkoho Narodu located?",
+        "a": "Arka Svobody Ukrayinsʹkoho Narodu stands in Khreshchatyi Park on Parkova Doroha, Kyiv, Ukraine, 02000 (Plus Code FG3H+QX), on the high right bank of the Dnipro River with a riverside viewing deck."
+      },
+      {
+        "q": "Is the Arch of Freedom of the Ukrainian People free to visit?",
+        "a": "Yes. The monument is a public open-air landmark inside a city park, and access is completely free, 24 hours a day, all year round - no ticket or reservation is required."
+      },
+      {
+        "q": "Why was the arch originally built?",
+        "a": "The arch was opened on 7 November 1982 during Kyiv's 1,500th anniversary celebrations to mark the 60th anniversary of the USSR and the 1654 Pereiaslav agreement. It was originally named the People's Friendship Arch and was designed by sculptor Oleksandr Skoblikov with architects Serhiy Myrhorodsky, Kostiantyn Sydorov and I. Ivanov."
+      },
+      {
+        "q": "Why is it now called the Arch of Freedom of the Ukrainian People?",
+        "a": "In April 2022 the monument was renamed Arka Svobody Ukrayinsʹkoho Narodu (Arch of Freedom of the Ukrainian People). The Soviet-era bronze sculpture group beneath the arch was dismantled, and today the arch is widely seen as a symbol of Ukrainian freedom and independence."
+      },
+      {
+        "q": "How big is the arch?",
+        "a": "The sweeping metal arc rises about 35 metres (115 ft) high and forms a recognizable rainbow-shaped curve above the Dnipro riverfront, making it a favourite photo spot at any time of day."
+      },
+      {
+        "q": "When is the best time to visit the arch?",
+        "a": "Sunrise and late afternoon offer the softest light, and spring and autumn bring the most comfortable temperatures. In summer, visit in the morning or in the evening, when the monument is also illuminated at night."
+      },
+      {
+        "q": "How do I get to the People's Freedom Arch?",
+        "a": "The closest metro station is Arsenalna (about a 15-20 minute walk through Mariinskyi Park). Buses and trolleybuses stop along Parkova Doroha, while the Kyiv Funicular and taxi services also reach the area."
+      },
+      {
+        "q": "What else can I combine with a visit to the arch?",
+        "a": "The arch sits between Mariinskyi Park and Khreshchatyi Park, close to Mariinskyi Palace, the Kyiv Funicular and European Square. Kyiv Pechersk Lavra, Maidan Nezalezhnosti and the Dnipro embankment are also easy to include in one walk."
+      }
+    ]
+  },
+  "sources": {
+    "title": "Sources & References",
+    "lead": "The information on this page is compiled from the following official and reference sources, checked periodically for accuracy.",
+    "items": [
+      {
+        "name": "Google Maps - Arka Svobody Ukrayinsʹkoho Narodu",
+        "url": "https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9"
+      },
+      {
+        "name": "State Tourism Development Agency of Ukraine",
+        "url": "https://www.tourism.gov.ua/"
+      },
+      {
+        "name": "Kyiv City State Administration",
+        "url": "https://kyivcity.gov.ua/"
+      },
+      {
+        "name": "Kyiv Official Cultural Heritage and Tourism Guide",
+        "url": "https://guide.kyivcity.gov.ua/"
+      },
+      {
+        "name": "Wikipedia - People's Friendship Arch",
+        "url": "https://en.wikipedia.org/wiki/People%27s_Friendship_Arch"
+      }
+    ]
+  },
+  "weather": {
+    "title": "Live Weather in Kyiv & 7-Day Outlook",
+    "subtitle": "A general city-wide forecast for the Kyiv area (50.45° N, 30.53° E) to help you choose what to wear and whether to bring an umbrella.",
+    "now": "Current conditions",
+    "feels": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precipitation": "Precipitation",
+    "prob": "Chance of rain",
+    "today": "Today",
+    "high": "High",
+    "low": "Low",
+    "days": "Next 7 days",
+    "loading": "Fetching the latest weather…",
+    "unavailable": "Weather information is temporarily unavailable. Please refresh the page and try again.",
+    "retry": "Try again",
+    "updatedAt": "Updated",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "adviceTitle": "Today’s travel tip",
+    "advices": {
+      "umbrella": "Rain is likely — keep a compact umbrella with you",
+      "raincoat": "Continuous rain is expected — bring rain gear and waterproof shoes",
+      "cold": "It will feel cold — dress warmly",
+      "hot": "It will feel hot — protect yourself from the sun and keep hydrated",
+      "windy": "Strong wind expected — hold on to your belongings",
+      "nice": "Conditions are generally fine — travel as usual"
+    },
+    "states": {
+      "clear": "Clear",
+      "partly": "Partly cloudy",
+      "overcast": "Overcast",
+      "fog": "Fog",
+      "drizzle": "Drizzle",
+      "rain": "Rain",
+      "snow": "Snow",
+      "showers": "Showers",
+      "thunder": "Thunderstorm"
+    }
+  },
+  "services": {
+    "title": "Visitor Services & Nearby Facilities",
+    "subtitle": "This nonprofit science website lists facility types only as a neutral overview. We do not recommend or rank any specific business or brand — please confirm details on site.",
+    "items": [
+      {
+        "icon": "wc",
+        "name": "Public toilets",
+        "desc": "The arch plaza is open public space and usually has no fixed toilets; the nearest are typically inside adjacent metro stations, shopping centres, park entrances and dining streets."
+      },
+      {
+        "icon": "water",
+        "name": "Water & supplies",
+        "desc": "Benches line the park paths and riverside walk, but public drinking fountains are scarce — bring your own water; bottled water is widely sold at convenience stores."
+      },
+      {
+        "icon": "rest",
+        "name": "Rest & shade",
+        "desc": "Shaded benches and groves along the park and riverside allow frequent breaks; in strong midday sun, prefer walking under the trees."
+      },
+      {
+        "icon": "dining",
+        "name": "Dining (by type)",
+        "desc": "The landmark and the hillside commercial streets offer local cuisine, casual eateries, coffee bakeries, desserts and fast food of every price range; peaks around 1–3 pm."
+      },
+      {
+        "icon": "lodging",
+        "name": "Lodging (by type)",
+        "desc": "Hotels, apartments, hostels and guesthouses are available across the city centre; choosing one near a metro line makes early and late exploring easier."
+      },
+      {
+        "icon": "shop",
+        "name": "Supermarkets & shops",
+        "desc": "Convenience stores are widespread downtown for water, snacks and basic pharmacy items; larger supermarkets and malls cover bulk shopping a bit further out."
+      },
+      {
+        "icon": "parking",
+        "name": "Parking",
+        "desc": "On-street parking near the landmark is limited and mostly paid by time; it fills up on weekends and holidays. Public transport is recommended, or park at an outlying lot and transfer."
+      },
+      {
+        "icon": "charging",
+        "name": "EV charging",
+        "desc": "Charging stations are progressively available at major hotels, commercial areas and some car parks; check live availability on charging platforms."
+      },
+      {
+        "icon": "fuel",
+        "name": "Fuel stations",
+        "desc": "Branded and independent stations inside the city and on ring roads provide petrol and diesel; plan ahead before long self-drive trips."
+      },
+      {
+        "icon": "transport",
+        "name": "Public transport links",
+        "desc": "Metro, buses, trolleybuses and bike share connect the area; transport cards can be obtained at main metro stations."
+      },
+      {
+        "icon": "cash",
+        "name": "Payment & currency",
+        "desc": "The local currency is the hryvnia (₴). Bank cards and mobile payments are widely accepted downtown; keep a little cash for small or urgent purchases."
+      },
+      {
+        "icon": "info",
+        "name": "Information services",
+        "desc": "City visitor points and bookshops provide maps, guides and transit brochures; tourism information is authoritative when issued by city authorities and official platforms."
+      }
+    ],
+    "tipsTitle": "General tips",
+    "tips": [
+      "The landmark is a free, open public space with no on-site facilities — plan your own food and supply stops;",
+      "Rush hours (roughly 8–9 am and 5–7 pm) make metro and buses crowded — schedule visits off-peak;",
+      "With large luggage, pushchairs or mobility aids, choose metro stations with lifts and step-free entrances;",
+      "Keep valuables close and watch your bags and phone outdoors."
+    ]
+  },
+  "seasons": {
+    "title": "Seasonal Visit Strategy",
+    "lead": "Turn “when to go” into a science question: the table below combines seasonal climate, riverside hydrology and urban wildlife patterns with visit and photography advice.",
+    "basis": "Based on Kyiv long-term observational averages for the 1991–2020 climate normal period. Use it for yearly planning — always check the live weather on this page for your travel day.",
+    "headers": {
+      "season": "Season",
+      "weather": "Climate conditions",
+      "water": "Riverside & water",
+      "nature": "Urban wildlife & plants",
+      "visit": "Visit & photography"
+    },
+    "rows": [
+      {
+        "season": "Spring (Mar–May)",
+        "weather": "Warming but still cool: about 1–8 °C in March, rising to 14–20 °C by May; rain increases and days warm up quickly.",
+        "water": "The Dnipro is in spring flood — higher and faster water, wide views but strong river wind; mind slippery steps and rails.",
+        "nature": "Migratory birds pass through, trees bud and blossom — a prime time for birding and plant photography.",
+        "visit": "Soft light in morning and evening with fewer visitors; carry a windproof jacket and a foldable umbrella."
+      },
+      {
+        "season": "Summer (Jun–Aug)",
+        "weather": "Typically 22–30 °C by day with occasional heat spikes; afternoon thundershowers are possible, nights are cooler.",
+        "water": "River cruises and waterside activity peak and the embankment gets busy; follow official notices about water and safety — swimming is not advised.",
+        "nature": "Dense shade and active mornings; birds sing at dawn, and urban wildlife is most visible early and late.",
+        "visit": "Best in the early morning or after sunset; protect against the sun at noon and expect weekend crowds."
+      },
+      {
+        "season": "Autumn (Sep–Nov)",
+        "weather": "Comfortable September (about 14–20 °C), cooling in October and early winter by November (about 0–5 °C); morning fog and rain increase.",
+        "water": "Autumn flood is gentle; morning mist over the river makes atmospheric photos, and the low sun returns by November.",
+        "nature": "Golden foliage and active squirrels — one of the best seasons to observe urban ecology.",
+        "visit": "October delivers some of the year’s best photos: low-angle light and saturated colours at dawn and dusk."
+      },
+      {
+        "season": "Winter (Dec–Feb)",
+        "weather": "Averages about -6–0 °C with snowfall and slippery roads; occasional cold snaps demand warm layers.",
+        "water": "The river usually does not freeze over; thin ice may appear in shallow inlets only in extreme cold — never walk on ice.",
+        "nature": "Quiet snowy parks reveal resident birds and footprints in the snow; short days call for extra lighting care.",
+        "visit": "Festive lights make December evenings beautiful; wear warm, slip-resistant footwear and mind battery drain in the cold."
+      }
+    ],
+    "note": "Note: temperatures are historical averages, not day-specific forecasts; river conditions and wildlife observation spots vary year to year."
+  },
+  "audiences": {
+    "title": "Visit Plans by Traveller Type",
+    "lead": "One landmark, many ways to enjoy it. Pick a plan that fits your group and pace — every option starts at the riverside entrance and can be freely split or combined.",
+    "note": "These are free, non-commercial suggestions prepared by this site; no agency or paid service is involved.",
+    "items": [
+      {
+        "type": "Families with children",
+        "desc": "A relaxed, park-style outing: turn “why is there a giant rainbow arch” and “where does the river come from” into mini stories, with photo-challenge tasks to keep kids engaged.",
+        "duration": "Suggested: 1.5–2.5 hours",
+        "best": "Best in: fine spring/autumn days or summer mornings",
+        "tips": [
+          "Push pushchairs along paved paths; watch slopes, steps and railings",
+          "Bring water, snacks, sun/rain protection and rest often on shaded benches",
+          "Explain through the senses: see the metallic glare, hear the wind, count the steps"
+        ]
+      },
+      {
+        "type": "Photography & nature",
+        "desc": "Built around light and small ecological details: low-angle sunrise and sunset light, dawn mist, river birds and urban animals, plus the geometry of the arch curve and metal texture.",
+        "duration": "Suggested: 3–4 hours (including waiting for light)",
+        "best": "Best in: October, and dawn/dusk of winter and spring",
+        "tips": [
+          "Use a telephoto for birds and details, a wide-angle for arch-and-river panoramas",
+          "Carry a tripod for low light and follow on-site rules",
+          "Rain or snow often yields atmospheric frames — weatherproof your gear"
+        ]
+      },
+      {
+        "type": "Low-mobility & step-free",
+        "desc": "Connects gentle slopes and viewing decks with a minimum of stairs: reach the core viewpoints with the shortest walk, rest often, and turn back any time.",
+        "duration": "Suggested: 1–1.5 hours",
+        "best": "Best in: weekday mornings and afternoons with calmer crowds",
+        "tips": [
+          "Use metro stations with lifts and step-free entrances to arrive",
+          "The viewing deck via the gentle main path already gives the key panorama",
+          "If using a wheelchair or walker, travel with a companion and mind slope signs"
+        ]
+      }
+    ]
+  },
+  "routes": {
+    "title": "Recommended General Routes",
+    "lead": "Independent of any tour product, the half-day or full-day rhythm below lets an ordinary visitor enjoy the landmark and its classic backdrop at ease. Both routes are free and can be shortened at any point.",
+    "items": [
+      {
+        "label": "Half-day essentials",
+        "time": "About 3–4 hours · mostly walking and viewpoints",
+        "points": [
+          "Enter from the riverside gate and take in the Dnipro and the opposite skyline from the deck (about 20 min)",
+          "Walk the plaza axis to the arch; study the rainbow curve and the ground inscriptions (about 30 min)",
+          "Stroll the Mariinskyi Park avenues, resting and refilling water on benches (about 40 min)",
+          "Descend toward European Square and leave by metro, bus or bike share (about 30 min)"
+        ],
+        "note": "Ideal for arrival day or a tight schedule — the shortest walk that still covers the core views and classic backdrop."
+      },
+      {
+        "label": "Full-day in depth",
+        "time": "About 6–8 hours · with breaks and meals",
+        "points": [
+          "Morning: arch — viewing deck — Mariinskyi Park for early light; the Mariinskyi Palace is ceremonial and can be viewed from outside only",
+          "Noon: eat as you wish in the commercial quarter, away from the hottest sun and rush lines",
+          "Afternoon: follow the slope into the old upper town, linking historic cathedral sites and old lanes",
+          "Evening: return to the riverside for sunset and the city lights panorama"
+        ],
+        "note": "Best for visitors staying a day or more who want to combine the landmark with the old town; evening light on the river is a highlight."
+      }
+    ],
+    "common": "General: no booking needed; wear comfortable shoes, bring rain gear or warm layers by season, keep valuables close and travel responsibly."
+  },
+  "responsibility": {
+    "title": "Science & Visitor Responsibility",
+    "lead": "This is a public space that remembers a city’s shared history. It deserves to be understood — and protected by every visitor.",
+    "blocks": [
+      {
+        "title": "Learn before you go",
+        "text": "Check official safety notices and weather, confirm metro operation and your documents; follow on-site signs and restricted areas on arrival."
+      },
+      {
+        "title": "Record with your eyes, don’t touch history",
+        "text": "Never climb the arch or pedestals, carve, scribble or pull at installations — keep this memorial space dignified and intact for the future."
+      },
+      {
+        "title": "Leave no trace",
+        "text": "Put rubbish in the bins or carry it out; clean up after picnics and dispose of cigarette butts and glass responsibly."
+      },
+      {
+        "title": "Respect the life around you",
+        "text": "Do not feed or chase birds, squirrels or other animals; when observing or photographing, stay calm, quiet and at a respectful distance."
+      },
+      {
+        "title": "Share the space with others",
+        "text": "Yield to others and keep noise low in busy hours; consider off-peak visits so everyone gets the best view."
+      },
+      {
+        "title": "Use photography equipment lawfully",
+        "text": "Tripods and drones are subject to local rules and on-site signs; do not photograph private interiors or sensitive facilities without permission."
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Timeline: from “Arch of Friendship” to “Arch of Freedom”",
+    "lead": "A chronology of how the monument’s identity changed — based on resolutions and public records.",
+    "sourceNote": "Compiled from Resolution No. 597 of the Council of Ministers of the Ukrainian SSR (28 Dec 1979), the Kyiv City Council decision of 14 May 2022, and public reporting by Ukrinform, Radio Svoboda and others.",
+    "oldPhotoTitle": "A note on “old photos”",
+    "oldPhotoText": "Historical images from 1982 onwards mostly live in Ukrainian state archives and news-agency libraries under copyright. To avoid unauthorised reuse we do not repost them here; instead we rely on the resolution texts, official records and verifiable reporting listed at the bottom of this page.",
+    "items": [
+      {
+        "year": "1979",
+        "title": "Approval decree",
+        "text": "Resolution No. 597 of the Council of Ministers of the Ukrainian SSR (28 Dec 1979) approved a “Friendship of Peoples” memorial complex in Kyiv."
+      },
+      {
+        "year": "1982.11.07",
+        "title": "Unveiled",
+        "text": "The arch was unveiled on 7 November 1982, timed with Kyiv’s 1500th anniversary and the USSR’s 60th. The arch itself is a silver arc of titanium alloy, about 35 m high and 50 m wide, with a 6.2 m bronze pair sculpture and a granite composition commemorating the 1654 Pereiaslav Council beneath it."
+      },
+      {
+        "year": "2017",
+        "title": "Temporary “Arch of Diversity”",
+        "text": "During the Eurovision Song Contest 2017 the arch was temporarily painted in rainbow colours and presented as the “Arch of Diversity”."
+      },
+      {
+        "year": "2022.04.26",
+        "title": "Bronze sculpture removed",
+        "text": "After the mayor’s announcement, the bronze “friendship of peoples” group beneath the arch was dismantled on 26 April 2022; the arch itself stayed."
+      },
+      {
+        "year": "2022.05.14",
+        "title": "Officially renamed",
+        "text": "The Kyiv City Council voted to rename the monument the “Arch of Freedom of the Ukrainian People” (Арка Свободи українського народу)."
+      },
+      {
+        "year": "2024.04.30",
+        "title": "Granite composition removed and stored",
+        "text": "The red-granite composition on the Pereiaslav theme was dismantled and handed to the State Aviation Museum for storage; the arch remains and now carries a new meaning — freedom of the Ukrainian people."
+      }
+    ]
+  },
+  "myths": {
+    "title": "Myth-busting: common misconceptions",
+    "lead": "Many claims circulate about this arch. We check each one against resolutions, archives and reputable media.",
+    "falseLabel": "Common myth",
+    "trueLabel": "Fact check",
+    "items": [
+      {
+        "claim": "The arch is just painted steel or stainless steel; the “titanium” story is marketing.",
+        "fact": "Not so: the arch is indeed clad in titanium alloy (built 1978–1982). Titanium gives it the signature silvery gloss that needs no regular repainting."
+      },
+      {
+        "claim": "The arch represents “Russian–Ukrainian friendship” and was built jointly by the two states.",
+        "fact": "It was initiated by the Soviet-era Council of Ministers of the Ukrainian SSR (Resolution No. 597, 1979) for Soviet anniversaries and promoted the official “friendship of peoples” idea. It also included a granite composition on the 1654 Pereiaslav Council, making the theme more complex than “friendship”. It was not a project of two sovereign states."
+      },
+      {
+        "claim": "In April 2022 the whole arch was demolished.",
+        "fact": "On 26 April 2022 only the bronze pair sculpture under the arch was dismantled; the arch itself was not demolished. On 14 May 2022 the Kyiv City Council renamed it the “Arch of Freedom of the Ukrainian People”. On 30 April 2024 the granite composition was also removed and preserved."
+      },
+      {
+        "claim": "After the renaming, the old “Arch of Friendship” vanished from history.",
+        "fact": "The old name and the bronze group were abolished, but history was not erased: the metal arch still stands, and the old name and events remain documented in archives and scholarship. That is why this site always cites both the new and the former name."
+      }
+    ]
+  },
+  "print": {
+    "title": "Take this guide with you: print & offline",
+    "desc": "The page is tuned for printing: choose “Print → Save as PDF” in your browser to create an offline handout for sharing.",
+    "action": "Print this page / Save as PDF",
+    "offlineTitle": "Offline access",
+    "offlineText": "The site can be installed on your device and revisited offline: after the first online visit, pages and images are cached by the browser and remain viewable without a connection."
+  },
+  "breadcrumb": {
+    "home": "People's Freedom Arch · official visitor guide",
+    "page": "Current page — Kyiv · Arch of Freedom of the Ukrainian People"
   }
 }

@@ -190,3 +190,98 @@ h1, h2, h3, h4, h5, h6 {
 a {
   transition: color 0.2s ease;
 }
+
+/* ===== Print-friendly / offline handout styles ===== */
+.no-print {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    margin: 12mm 10mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body {
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 打印时隐藏站内导航、动态/装饰性板块与第三方 iframe */
+  header,
+  footer,
+  #gallery,
+  #reviews,
+  #map,
+  #weather,
+  #print,
+  .no-print,
+  iframe {
+    display: none !important;
+  }
+
+  /* 首页首屏为装饰性大图，打印时跳过 */
+  main > section:first-child {
+    display: none !important;
+  }
+
+  /* 浅色打印：将深色主题变量强制转为黑色文字 */
+  * {
+    color: #111 !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body,
+  section {
+    background: #fff !important;
+  }
+
+  .section-padding {
+    padding: 1.25rem 0.5rem !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+  }
+
+  p,
+  li,
+  blockquote {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    break-inside: avoid;
+  }
+
+  table {
+    width: 100%;
+    font-size: 9pt;
+    border-collapse: collapse;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* 展开 FAQ 中折叠的问答 */
+  details > *:not(summary) {
+    display: block !important;
+  }
+}

@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
+import { SITE } from '@/lib/seo';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://diukivskyisad.com';
+  const baseUrl = SITE.baseUrl;
   const locales = ['zh', 'en', 'ru', 'uk'];
   const routes = ['', '/privacy-policy', '/terms-of-service', '/cookie-settings'];
 

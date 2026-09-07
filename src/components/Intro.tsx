@@ -1,4 +1,5 @@
 import { useTranslations, useMessages } from 'next-intl';
+import RichText from './RichText';
 
 export default function Intro() {
   const t = useTranslations('intro');
@@ -10,6 +11,10 @@ export default function Intro() {
   return (
     <section className="section-padding">
       <div className="max-w-4xl mx-auto">
+        {/* 地理面包屑与归属层级：{景点} → {城市} → {国家} */}
+        <p className="text-xs sm:text-sm mb-4 tracking-wide" style={{ color: 'var(--text-muted)' }}>
+          {t('crumb')}
+        </p>
         <h2
           className="font-display text-3xl sm:text-4xl font-semibold mb-6"
           style={{ color: 'var(--text-primary)' }}
@@ -17,6 +22,14 @@ export default function Intro() {
           {t('title')}
         </h2>
         <div className="w-12 h-0.5 mb-8" style={{ background: 'var(--accent)' }} />
+
+        {/* 首段等位声明：将域名/俗称与官方全称在语义上等同 */}
+        <p
+          className="text-lg leading-relaxed mb-4"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          <RichText text={t('lead')} />
+        </p>
 
         <p
           className="text-lg leading-relaxed mb-12"

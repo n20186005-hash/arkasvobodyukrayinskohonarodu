@@ -1,0 +1,19 @@
+# Cloudflare Workers 部署配置
+# 前置步骤：npm run build（生成 out/ 静态产物），随后 npx wrangler deploy
+name = "arka-svobody"
+main = "worker/index.js"
+compatibility_date = "2026-06-01"
+
+# 用 Workers Static Assets 托管 next export 产物（out/）
+[assets]
+directory = "./out"
+binding = "ASSETS"
+# 未匹配路径回退到 out/404.html（保持多语言站点自己的 404 页）
+not_found_handling = "404-page"
+# 每个请求先进入 Worker（用于 /api/weather 与无扩展名 -> .html 的路由改写）
+run_worker_first = true
+
+# 若绑定自有域名，可在此声明路由（需先 npx wrangler login）：
+# [[routes]]
+# pattern = "example.com"
+# custom_domain = true

@@ -8,8 +8,10 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="/gallery/arka-svobody-ukrayinskoho-narodu (1).jpg"
-          alt="Arka Svobody Ukrayinsʹkoho Narodu"
+          src="/gallery/arka-svobody-ukrayinskoho-narodu-1.jpg"
+          alt="Arka Svobody Ukrayinsʹkoho Narodu - Main view in Kyiv, Ukraine"
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0" style={{ background: 'var(--hero-overlay)' }} />

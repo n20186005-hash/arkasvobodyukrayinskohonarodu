@@ -1,0 +1,35 @@
+{
+  "name": "Arka Svobody Ukrayinsʹkoho Narodu - Visitor Guide & Location",
+  "short_name": "Arka Svobody",
+  "description": "Visitor guide to Arka Svobody Ukrayinsʹkoho Narodu (People's Freedom Arch) in Kyiv, Ukraine - location map, history and travel tips.",
+  "id": "/ru/",
+  "start_url": "/ru/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b3d91",
+  "theme_color": "#0057B7",
+  "categories": ["travel", "tourism"],
+  "lang": "ru",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
