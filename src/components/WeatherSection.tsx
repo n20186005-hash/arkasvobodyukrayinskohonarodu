@@ -1,15 +1,15 @@
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale, useMessages, useTranslations } from 'next-intl';
 import { useEffect, useState, useCallback } from 'react';
 
 // 基辅市中心坐标（景点所在范围）的通用天气接口。数据不带任何第三方标识。
 // 部署在 Cloudflare Workers 时，浏览器统一走同源 /api/weather（服务端缓存 + 30 分钟自动刷新）；
 // 该直连地址仅作为纯静态托管（如 GitHub Pages）下的降级通道。
 const WEATHER_URL =
-  'https://api.open-meteo.com/v1/forecast?latitude=50.4544624&longitude=30.5299656&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,sunrise,sunset&timezone=Europe%2FKyiv&forecast_days=7&wind_speed_unit=kmh';
+  'https://api.open-meteo.com/v1/forecast?latitude=50.4544624&longitude=30.5299656&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,wind_gusts_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,uv_index_max,sunrise,sunset&timezone=Europe%2FKyiv&forecast_days=7&wind_speed_unit=kmh&alerts=true';
 
-const CACHE_KEY = 'kyiv-weather-cache-v1';
+const CACHE_KEY = 'kyiv-weather-cache-v2';
 const CACHE_TTL = 30 * 60 * 1000; // 30 分钟内优先使用本地缓存，避免重复请求
 
 type Kind =
@@ -35,6 +35,9 @@ function kindOf(code: number): Kind {
   return 'thunder';
 }
 
+// 中到大雨（WMO 63 中雨 / 65 大雨 / 66-67 冻雨 / 81 中阵雨 / 82 强阵雨）
+const HEAVY_RAIN = new Set([63, 65, 66, 67, 81, 82]);
+
 interface Day {
   date: string;
   code: number;
@@ -43,8 +46,14 @@ interface Day {
   precip: number;
   prob: number;
   wind: number;
+  uv: number | null;
   sunrise: string;
   sunset: string;
+}
+
+interface WeatherAlert {
+  event?: string;
+  description?: string;
 }
 
 interface WeatherData {
@@ -53,9 +62,11 @@ interface WeatherData {
   humidity: number;
   precipitation: number;
   wind: number;
+  gust: number;
   code: number;
   time: string;
   days: Day[];
+  alerts: WeatherAlert[];
 }
 
 function parsePayload(raw: any): WeatherData {
@@ -68,18 +79,24 @@ function parsePayload(raw: any): WeatherData {
     precip: d.precipitation_sum[i],
     prob: d.precipitation_probability_max[i],
     wind: d.wind_speed_10m_max[i],
+    uv: Array.isArray(d.uv_index_max) ? (d.uv_index_max[i] ?? null) : null,
     sunrise: d.sunrise[i],
     sunset: d.sunset[i],
   }));
+  const alerts = Array.isArray(raw?.alerts?.alerts)
+    ? (raw.alerts.alerts as WeatherAlert[])
+    : [];
   return {
     temperature: raw.current.temperature_2m,
     feels: raw.current.apparent_temperature,
     humidity: raw.current.relative_humidity_2m,
     precipitation: raw.current.precipitation,
     wind: raw.current.wind_speed_10m,
+    gust: raw.current.wind_gusts_10m ?? raw.current.wind_speed_10m,
     code: raw.current.weather_code,
     time: raw.current.time,
     days,
+    alerts,
   };
 }
 
@@ -128,6 +145,9 @@ function formatClock(iso: string): string {
 export default function WeatherSection() {
   const t = useTranslations('weather');
   const locale = useLocale();
+  const messages = useMessages() as any;
+  const advice = messages?.weather?.advice ?? {};
+
   const [data, setData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -162,23 +182,127 @@ export default function WeatherSection() {
 
   const retry = useCallback(() => setReload((r) => r + 1), []);
 
-  const rawAdvices = t.raw('advices') as Record<string, string>;
+  /** 分类文案取词：只在条件满足时渲染对应条目，不满足的动态隐藏 */
+  const pick = (cat: string, key: string) => (advice?.[cat]?.[key] as string) || '';
 
-  let adviceKeys: string[] = [];
-  if (data && data.days[0]) {
-    const today = data.days[0];
-    const currentKind = kindOf(data.code);
-    const heavyRain =
-      today.prob >= 80 || today.precip >= 8 || currentKind === 'thunder';
-    const anyRain =
-      today.prob >= 50 || today.precip >= 1 || data.precipitation > 0.2;
-    if (heavyRain) adviceKeys.push('raincoat');
-    else if (anyRain) adviceKeys.push('umbrella');
-    if (today.max <= 4 || today.min <= -3) adviceKeys.push('cold');
-    if (today.max >= 26) adviceKeys.push('hot');
-    if (today.wind >= 28) adviceKeys.push('windy');
-    if (adviceKeys.length === 0) adviceKeys.push('nice');
+  /** 根据实况与今日预报推导"面向游客"的建议组合 */
+  function buildAdvice(w: WeatherData) {
+    const today = w.days[0];
+    const cur = kindOf(w.code);
+    const todayKind = kindOf(today.code);
+    const curHeavy = HEAVY_RAIN.has(w.code);
+    const todayHeavy = HEAVY_RAIN.has(today.code);
+    const thunderNow = cur === 'thunder' || todayKind === 'thunder';
+    const nowLight =
+      !curHeavy && (cur === 'drizzle' || cur === 'rain' || cur === 'showers');
+    const snowNow = cur === 'snow' || todayKind === 'snow';
+    const fogNow = cur === 'fog' || todayKind === 'fog';
+    const prob = today.prob;
+    const hotNow = w.temperature >= 32 || w.feels >= 33 || today.max >= 32;
+    const coldDay = today.max <= 10;
+    const uv = today.uv == null ? -1 : today.uv;
+
+    const riskTexts: string[] = [];
+    const dressKeys: string[] = [];
+    const planKeys: string[] = [];
+    const gearKeys: string[] = [];
+    const push = (list: string[], key: string) => {
+      if (!list.includes(key)) list.push(key);
+    };
+
+    // —— 官方气象预警（优先级最高，置顶红色）——
+    for (const alert of w.alerts) {
+      if (alert.event && riskTexts.length < 3) {
+        riskTexts.push(pick('risk', 'alert').replaceAll('{event}', alert.event));
+      }
+    }
+
+    // —— 风险组合 ——
+    if (thunderNow) push(riskTexts, pick('risk', 'thunder'));
+    if (!thunderNow && (curHeavy || todayHeavy)) {
+      push(riskTexts, pick('risk', 'heavyRain'));
+    }
+    if (w.wind >= 50) {
+      push(riskTexts, pick('risk', 'gale'));
+    } else if (today.wind >= 50) {
+      push(riskTexts, pick('risk', 'galeToday'));
+    }
+    if (fogNow && riskTexts.length < 6) {
+      push(riskTexts, pick('risk', 'fog'));
+    }
+
+    // —— 穿衣 ——
+    if (snowNow && !curHeavy && !todayHeavy) {
+      push(dressKeys, 'snow');
+    } else if (hotNow) {
+      push(dressKeys, 'hot');
+    } else if (coldDay) {
+      push(dressKeys, 'cold');
+    }
+    if (!hotNow && !coldDay && !snowNow && today.max - today.min > 8) {
+      push(dressKeys, 'layers');
+    }
+    if (curHeavy || todayHeavy) {
+      push(dressKeys, 'raincoat');
+    } else if (nowLight) {
+      push(dressKeys, 'lightRain');
+    }
+    if (w.wind >= 29 && w.wind < 50) push(dressKeys, 'wind');
+
+    // —— 游玩安排 ——
+    const raining = curHeavy || todayHeavy || nowLight || thunderNow;
+    if (thunderNow) {
+      // 雷雨以风险提示为主，弱化普通建议
+    } else if (curHeavy || todayHeavy) {
+      push(planKeys, 'heavyRain');
+    } else if (nowLight) {
+      push(planKeys, 'lightRain');
+    } else if (prob >= 60) {
+      push(planKeys, 'rainChance');
+    } else if (snowNow) {
+      push(planKeys, 'snow');
+    } else if (hotNow) {
+      push(planKeys, 'hot');
+    } else if (cur === 'overcast' && !fogNow) {
+      push(planKeys, 'overcast');
+    } else if (cur === 'clear' || cur === 'partly') {
+      push(planKeys, 'clear');
+    }
+
+    // —— 随身物品 ——
+    if (curHeavy || todayHeavy) {
+      push(gearKeys, 'raincoat');
+    } else if (nowLight || prob >= 60) {
+      push(gearKeys, 'umbrella');
+    }
+    if (uv >= 5) {
+      push(gearKeys, hotNow ? 'hot' : 'uv');
+    } else if (hotNow) {
+      push(gearKeys, 'hot');
+    }
+    if (coldDay && !snowNow) push(gearKeys, 'cold');
+    if (
+      !raining &&
+      !hotNow &&
+      !coldDay &&
+      today.max >= 24 &&
+      today.max <= 31 &&
+      prob < 60
+    ) {
+      push(gearKeys, 'water');
+    }
+
+    return { riskTexts, dressKeys, planKeys, gearKeys };
   }
+
+  const states = t.raw('states') as Record<string, string>;
+  const nowKind = data ? kindOf(data.code) : null;
+  const adviceOut = data ? buildAdvice(data) : null;
+  const hasAny =
+    !!adviceOut &&
+    (adviceOut.dressKeys.length > 0 ||
+      adviceOut.planKeys.length > 0 ||
+      adviceOut.gearKeys.length > 0);
 
   const weekdayFormatter = new Intl.DateTimeFormat(locale, { weekday: 'short' });
 
@@ -189,8 +313,7 @@ export default function WeatherSection() {
     return `${wd} ${day.toString().padStart(2, '0')}.${m.toString().padStart(2, '0')}`;
   }
 
-  const states = t.raw('states') as Record<string, string>;
-  const nowKind = data ? kindOf(data.code) : null;
+  const uvToday = data ? data.days[0].uv : null;
 
   return (
     <section id="weather" className="section-padding" style={{ background: 'var(--bg-secondary)' }}>
@@ -224,8 +347,8 @@ export default function WeatherSection() {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-              {/* 当前实况 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {/* ① 当前实况（基础天气卡片） */}
               <div
                 className="rounded-xl p-6"
                 style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}
@@ -258,33 +381,7 @@ export default function WeatherSection() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs" style={{ color: 'var(--text-muted)' }}>
-                  <span>{t('updatedAt')}: {formatClock(data.time)}</span>
-                  <span>{t('sunrise')}: {formatClock(data.days[0].sunrise)}</span>
-                  <span>{t('sunset')}: {formatClock(data.days[0].sunset)}</span>
-                </div>
-              </div>
-
-              {/* 出行建议 + 今日降水 */}
-              <div
-                className="rounded-xl p-6"
-                style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}
-              >
-                <h3 className="font-display text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-                  {t('adviceTitle')}
-                </h3>
-                <ul className="space-y-3 mb-6">
-                  {adviceKeys.map((key) => (
-                    <li key={key} className="flex items-start gap-3">
-                      <span
-                        className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                        style={{ background: 'var(--accent)' }}
-                      />
-                      <span style={{ color: 'var(--text-secondary)' }}>{rawAdvices[key]}</span>
-                    </li>
-                  ))}
-                </ul>
-
+                {/* 今日核心指标：降水概率 / 降水量 / 紫外线 / 最高最低 */}
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="rounded-lg px-4 py-3" style={{ background: 'var(--bg-secondary)' }}>
                     <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>{t('prob')}</p>
@@ -298,12 +395,122 @@ export default function WeatherSection() {
                       {data.days[0].precip} mm
                     </p>
                   </div>
+                  <div className="rounded-lg px-4 py-3" style={{ background: 'var(--bg-secondary)' }}>
+                    <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>{t('uv')}</p>
+                    <p className="font-semibold" style={{ color: 'var(--text-primary)' }}>
+                      {uvToday == null ? '—' : `${Math.round(uvToday)}`}
+                    </p>
+                  </div>
+                  <div className="rounded-lg px-4 py-3" style={{ background: 'var(--bg-secondary)' }}>
+                    <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
+                      {t('high')} / {t('low')}
+                    </p>
+                    <p className="font-semibold" style={{ color: 'var(--text-primary)' }}>
+                      {Math.round(data.days[0].max)}° / {Math.round(data.days[0].min)}°
+                    </p>
+                  </div>
                 </div>
+
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs mt-4" style={{ color: 'var(--text-muted)' }}>
+                  <span>{t('updatedAt')}: {formatClock(data.time)}</span>
+                  <span>{t('sunrise')}: {formatClock(data.days[0].sunrise)}</span>
+                  <span>{t('sunset')}: {formatClock(data.days[0].sunset)}</span>
+                </div>
+              </div>
+
+              {/* ② 出行建议核心区：穿搭 / 游玩 / 随身 + 风险置顶 */}
+              <div
+                className="rounded-xl p-6 flex flex-col"
+                style={{ background: 'var(--bg-tertiary)', border: '1px solid var(--border-color)' }}
+              >
+                <h3 className="font-display text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
+                  {t('adviceTitle')}
+                </h3>
+
+                {/* 风险提醒：有预警/风险才显示 */}
+                {adviceOut && adviceOut.riskTexts.length > 0 && (
+                  <div className="weather-risk px-4 py-3 mb-5">
+                    <ul className="space-y-2 text-sm leading-relaxed">
+                      {adviceOut.riskTexts.map((text, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span aria-hidden>⚠</span>
+                          <span>{text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {hasAny ? (
+                  <>
+                    {adviceOut!.dressKeys.length > 0 && (
+                      <div className="mb-5">
+                        <p className="text-xs font-semibold tracking-wide mb-2" style={{ color: 'var(--accent)' }}>
+                          {t('dress')}
+                        </p>
+                        <ul className="space-y-2">
+                          {adviceOut!.dressKeys.map((key) => (
+                            <li key={key} className="flex items-start gap-3">
+                              <span
+                                className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                                style={{ background: 'var(--accent)' }}
+                              />
+                              <span style={{ color: 'var(--text-secondary)' }}>{pick('dress', key)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {adviceOut!.planKeys.length > 0 && (
+                      <div className="mb-5">
+                        <p className="text-xs font-semibold tracking-wide mb-2" style={{ color: 'var(--accent)' }}>
+                          {t('plan')}
+                        </p>
+                        <ul className="space-y-2">
+                          {adviceOut!.planKeys.map((key) => (
+                            <li key={key} className="flex items-start gap-3">
+                              <span
+                                className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                                style={{ background: 'var(--accent)' }}
+                              />
+                              <span style={{ color: 'var(--text-secondary)' }}>{pick('plan', key)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {adviceOut!.gearKeys.length > 0 && (
+                      <div className="mb-1">
+                        <p className="text-xs font-semibold tracking-wide mb-2" style={{ color: 'var(--accent)' }}>
+                          {t('gear')}
+                        </p>
+                        <ul className="space-y-2">
+                          {adviceOut!.gearKeys.map((key) => (
+                            <li key={key} className="flex items-start gap-3">
+                              <span
+                                className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                                style={{ background: 'var(--accent)' }}
+                              />
+                              <span style={{ color: 'var(--text-secondary)' }}>{pick('gear', key)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  adviceOut &&
+                  adviceOut.riskTexts.length === 0 && (
+                    <p className="text-sm mt-auto" style={{ color: 'var(--text-muted)' }}>
+                      {t('noSpecial')}
+                    </p>
+                  )
+                )}
               </div>
             </div>
 
-            {/* 未来 7 日 */}
-            <h3 className="font-display text-lg font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
+            {/* ③ 未来 7 日预报 */}
+            <h3 className="font-display text-lg font-semibold mb-4 mt-10" style={{ color: 'var(--text-primary)' }}>
               {t('days')}
             </h3>
             <div className="flex gap-3 overflow-x-auto pb-2 -mx-1 px-1">

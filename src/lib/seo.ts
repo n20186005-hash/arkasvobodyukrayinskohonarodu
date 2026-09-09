@@ -28,7 +28,7 @@ export const SITE = {
   // 地图
   mapsShareUrl: 'https://maps.app.goo.gl/CCAwyVXkAEdCV7ai9',
   mapsEmbedSrc:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4346.2647282302305!2d30.529965600000004!3d50.4544624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce4ef9be01b7%3A0xcd7dcf2eba57eba2!2sArka%20Svobody%20Ukrayins%CA%B9koho%20Narodu!5e1!3m2!1sen!2s!4v1788741593631!5m2!1sen!2s',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4518.263027977546!2d30.529965600000004!3d50.4544624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce4ef9be01b7%3A0xcd7dcf2eba57eba2!2sArka%20Svobody%20Ukrayins%CA%B9koho%20Narodu!5e1!3m2!1szh-CN!2s!4v1788935698968!5m2!1szh-CN!2s',
 
   // 周边地标与官方外链
   nearbyLandmark1: 'Mariinskyi Palace',
@@ -44,6 +44,14 @@ export const SITE = {
 } as const;
 
 export type SiteInfo = typeof SITE;
+
+/** 历史曾用名（1982–2022 年旧称），用于 JSON-LD alternateName 与正文语境 */
+export const LEGACY_NAMES = {
+  en: "People's Friendship Arch",
+  uk: 'Арка дружби народів',
+  ru: 'Арка дружбы народов',
+  zh: '人民友谊拱门',
+} as const;
 
 /** 首图（本地图库），供 og:image / JSON-LD image 使用 */
 export const ogImageUrl = `${SITE.baseUrl}/gallery/arka-svobody-ukrayinskoho-narodu-1.jpg`;
@@ -84,7 +92,7 @@ export function alternatesFor(locale: Locale, route = '') {
       en: urls.en,
       ru: urls.ru,
       uk: urls.uk,
-      'x-default': urls.ru,
+      'x-default': urls.uk,
     } as Record<string, string>,
   };
 }

@@ -57,7 +57,7 @@ export default async function HomePage({
     ],
   };
 
-  // 网站实体：将四语首页与统一英文实体名绑定
+  // 网站实体：将四语首页与统一英文实体名绑定（publisher 指向顶层 Organization @id）
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -68,9 +68,31 @@ export default async function HomePage({
     description: metaDescription,
     inLanguage: ['uk', 'en', 'ru', 'zh'],
     publisher: {
-      '@type': 'Organization',
-      name: SITE.fullName,
-      url: SITE.baseUrl,
+      '@id': `${SITE.baseUrl}/#organization`,
+    },
+  };
+
+  // 当前语言首页的网页级标注（dateModified 固定值，避免构建漂移）
+  const langMap: Record<string, string> = {
+    zh: 'zh-CN',
+    en: 'en-US',
+    ru: 'ru-RU',
+    uk: 'uk-UA',
+  };
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${selfUrl}#webpage`,
+    url: selfUrl,
+    name: messages?.meta?.title || SITE.fullName,
+    description: metaDescription,
+    dateModified: '2026-09-09',
+    inLanguage: langMap[locale] || 'ru-RU',
+    isPartOf: {
+      '@id': `${SITE.baseUrl}/#website`,
+    },
+    about: {
+      '@id': `${SITE.baseUrl}/#attraction`,
     },
   };
 
@@ -111,6 +133,10 @@ export default async function HomePage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
     </>
   );

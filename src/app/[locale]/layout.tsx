@@ -3,7 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
-import { SITE, ogImageUrl, ogImageAlt, Locale, localeHomeUrls } from '@/lib/seo';
+import { SITE, LEGACY_NAMES, ogImageUrl, ogImageAlt, Locale, localeHomeUrls } from '@/lib/seo';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -40,7 +40,7 @@ export async function generateMetadata({
         en: localeHomeUrls.en,
         ru: localeHomeUrls.ru,
         uk: localeHomeUrls.uk,
-        'x-default': localeHomeUrls.ru,
+        'x-default': localeHomeUrls.uk,
       },
     },
     openGraph: {
@@ -53,8 +53,8 @@ export async function generateMetadata({
       images: [
         {
           url: ogImageUrl,
-          width: 1200,
-          height: 630,
+          width: 1600,
+          height: 1201,
           alt: ogImageAlt,
         },
       ],
@@ -114,12 +114,20 @@ export default async function LocaleLayout({
   const selfUrl = localeHomeUrls[locale as Locale];
 
   // —— 结构化数据：TouristAttraction（实体锚定，含 @id / image / geo）——
+  const reviewCountNumeric = Number(String(SITE.reviewCount).replace(/[^0-9]/g, ''));
   const attractionJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
     '@id': `${SITE.baseUrl}/#attraction`,
     name: SITE.fullName,
-    alternateName: [SITE.shortName, SITE.ukName, `${SITE.city} ${SITE.fullName}`],
+    alternateName: [
+      SITE.shortName,
+      SITE.ukName,
+      LEGACY_NAMES.en,
+      LEGACY_NAMES.uk,
+      LEGACY_NAMES.ru,
+      `${SITE.city} ${SITE.fullName}`,
+    ],
     description: messages?.meta?.description || SITE.description,
     url: selfUrl,
     image: [ogImageUrl],
@@ -138,7 +146,48 @@ export default async function LocaleLayout({
       longitude: SITE.lng,
     },
     hasMap: SITE.mapsShareUrl,
-    sameAs: [SITE.mapsShareUrl, SITE.officialTourismUrl, SITE.kyivCityUrl, SITE.kyivGuideUrl],
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+      ],
+      opens: '00:00',
+      closes: '23:59',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: Number(SITE.rating),
+      reviewCount: reviewCountNumeric,
+      bestRating: 5,
+    },
+    sameAs: [
+      SITE.mapsShareUrl,
+      SITE.officialTourismUrl,
+      SITE.kyivCityUrl,
+      SITE.kyivGuideUrl,
+      SITE.wikipediaUrl,
+    ],
+  };
+
+  // —— 结构化数据：Organization（站点实体，供 WebSite.publisher / WebPage 引用）——
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE.baseUrl}/#organization`,
+    name: SITE.fullName,
+    alternateName: SITE.shortName,
+    url: SITE.baseUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SITE.baseUrl}/icons/icon-512.png`,
+    },
+    sameAs: [SITE.mapsShareUrl, SITE.officialTourismUrl, SITE.kyivCityUrl],
   };
 
   // —— 结构化数据：FAQPage（与页面 FAQ 板块一一对应）——
@@ -163,9 +212,6 @@ export default async function LocaleLayout({
   return (
     <html lang={langMap[locale] || 'zh-CN'} suppressHydrationWarning>
       <head>
-        {/* Google Adsense - 请替换为您的实际ID */}
-        {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-ACTUAL-ID" crossOrigin="anonymous" /> */}
-        {/* <meta name="google-adsense-account" content="ca-pub-YOUR-ACTUAL-ID" /> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -189,22 +235,44 @@ export default async function LocaleLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content={SITE.shortName} />
 
-        {/* GA4 */}
+        {/* GA4 (G-HXM22WWPKP) - 同意门控：读取 cookiePrefs.analytics，同意后按需加载 */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-HXM22WWPKP', { anonymize_ip: true });
+              (function () {
+                function loadGtag() {
+                  if (window.__gtagLoaded) return;
+                  window.__gtagLoaded = true;
+                  var s = document.createElement('script');
+                  s.async = true;
+                  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP';
+                  document.head.appendChild(s);
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag() { dataLayer.push(arguments); }
+                  window.gtag = gtag;
+                  gtag('js', new Date());
+                  gtag('config', 'G-HXM22WWPKP', { anonymize_ip: true });
+                }
+                function checkConsent() {
+                  try {
+                    var prefs = JSON.parse(localStorage.getItem('cookiePrefs') || '{}');
+                    if (prefs && prefs.analytics) loadGtag();
+                  } catch (e) {}
+                }
+                checkConsent();
+                window.addEventListener('consent-updated', checkConsent);
+              })();
             `,
           }}
         />
 
         {/* 结构化数据 JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(attractionJsonLd) }}

@@ -1,10 +1,10 @@
 // Cloudflare Worker：
 //  - /api/weather 由服务端代拉 Open-Meteo，并在 Cloudflare 侧缓存 30 分钟（自动刷新）；
 //  - 其余请求交由 Workers Static Assets 托管 out/。由于 next export 产出的是
-//    zh.html / ru.html 这类根级文件，这里把无扩展名的多语言美观路径（如 /ru、/ru/privacy-policy/）
+//    zh.html / uk.html 这类根级文件，这里把无扩展名的多语言美观路径（如 /uk、/uk/privacy-policy/）
 //    重写到对应 .html 产物，并保留离线 PWA 语义。
 const WEATHER_UPSTREAM =
-  'https://api.open-meteo.com/v1/forecast?latitude=50.4544624&longitude=30.5299656&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,sunrise,sunset&timezone=Europe%2FKyiv&forecast_days=7&wind_speed_unit=kmh';
+  'https://api.open-meteo.com/v1/forecast?latitude=50.4544624&longitude=30.5299656&current=temperature_2m,apparent_temperature,relative_humidity_2m,precipitation,weather_code,wind_speed_10m,wind_gusts_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,uv_index_max,sunrise,sunset&timezone=Europe%2FKyiv&forecast_days=7&wind_speed_unit=kmh&alerts=true';
 
 // 服务端缓存周期：30 分钟。
 const CACHE_TTL_MS = 30 * 60 * 1000;
@@ -26,7 +26,7 @@ async function serveStatic(request, env) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
-  // 无扩展名路径 → 同名的 .html 产物（/ru/ -> /ru.html，/ru/a/ -> /ru/a.html）
+  // 无扩展名路径 → 同名的 .html 产物（/uk/ -> /uk.html，/uk/a/ -> /uk/a.html）
   if (pathname !== '/' && !/\.\w+$/.test(pathname)) {
     const base = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
     const candidate = new URL(base + '.html', url.origin);

@@ -51,7 +51,7 @@ self.addEventListener('fetch', (event) => {
           const cached = await caches.match(request);
           if (cached) return cached;
           // 静态托管会把默认首页保存为不同路径名，逐一尝试
-          for (const fallback of ['/ru.html', '/ru/', '/ru']) {
+          for (const fallback of ['/uk.html', '/uk/', '/uk']) {
             const hit = await caches.match(fallback);
             if (hit) return hit;
           }

@@ -69,9 +69,19 @@ export default function CookieSettingsClient() {
     } catch {}
   }, []);
 
+  // 保存后通知站点（如 GA4 门控脚本）按新偏好即时加载/停用分析
+  function notifyConsentChange() {
+    try {
+      window.dispatchEvent(new Event('consent-updated'));
+    } catch {
+      /* 忽略派发异常 */
+    }
+  }
+
   function handleSave() {
     localStorage.setItem('cookiePrefs', JSON.stringify({ analytics, preferences, marketing }));
     setSaved(true);
+    notifyConsentChange();
     setTimeout(() => setSaved(false), 2000);
   }
 
@@ -81,6 +91,7 @@ export default function CookieSettingsClient() {
     setMarketing(false);
     localStorage.setItem('cookiePrefs', JSON.stringify({ analytics: false, preferences: false, marketing: false }));
     setSaved(true);
+    notifyConsentChange();
     setTimeout(() => setSaved(false), 2000);
   }
 
