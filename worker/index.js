@@ -13,6 +13,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // 统一规范主机：apex（非 www）308 重定向到 www，避免重复收录
+    if (url.hostname === 'arkasvobodyukrayinskohonarodu.com') {
+      const target = `https://www.${url.host}${url.pathname}${url.search}`;
+      return Response.redirect(target, 308);
+    }
+
     // 天气代理接口
     if (url.pathname === '/api/weather' && request.method === 'GET') {
       return proxyWeather(request);

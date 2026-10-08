@@ -114,7 +114,8 @@ export default async function LocaleLayout({
   const selfUrl = localeHomeUrls[locale as Locale];
 
   // —— 结构化数据：TouristAttraction（实体锚定，含 @id / image / geo）——
-  const reviewCountNumeric = Number(String(SITE.reviewCount).replace(/[^0-9]/g, ''));
+  // 注意：4.6 / 28,735 为 Google Maps 同步数据，并非本站自产评价，
+  // 按 Google 结构化数据政策不写入 aggregateRating，仅在页面展示中标注来源。
   const attractionJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
@@ -159,12 +160,6 @@ export default async function LocaleLayout({
       ],
       opens: '00:00',
       closes: '23:59',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: Number(SITE.rating),
-      reviewCount: reviewCountNumeric,
-      bestRating: 5,
     },
     sameAs: [
       SITE.mapsShareUrl,

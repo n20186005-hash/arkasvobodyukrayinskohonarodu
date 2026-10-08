@@ -5,7 +5,8 @@
 
 export const SITE = {
   domain: 'arkasvobodyukrayinskohonarodu.com',
-  baseUrl: 'https://arkasvobodyukrayinskohonarodu.com',
+  // 规范主机统一为 www（与 SEO 报告一致），apex 由 worker 308 重定向到 www
+  baseUrl: 'https://www.arkasvobodyukrayinskohonarodu.com',
 
   // 景点实体
   fullName: 'Arka Svobody Ukrayinsʹkoho Narodu',
@@ -38,9 +39,9 @@ export const SITE = {
   kyivGuideUrl: 'https://guide.kyivcity.gov.ua/',
   wikipediaUrl: 'https://en.wikipedia.org/wiki/People%27s_Friendship_Arch',
 
-  // Google 展示数据
+  // Google 展示数据（同步自 Google Maps，仅用于页面展示，不写入结构化数据）
   rating: '4.6',
-  reviewCount: '28,740',
+  reviewCount: '28,735',
 } as const;
 
 export type SiteInfo = typeof SITE;

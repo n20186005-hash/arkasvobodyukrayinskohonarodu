@@ -35,6 +35,7 @@ export default function Hero() {
               </svg>
               <span className="text-white text-sm font-medium">{t('rating')}</span>
               <span className="text-white/60 text-xs">({t('reviewCount')})</span>
+              <span className="text-white/50 text-xs">· {t('ratingSource')}</span>
             </div>
             <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
