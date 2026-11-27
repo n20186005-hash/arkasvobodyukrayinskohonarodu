@@ -32,7 +32,7 @@ export default function LanguageToggle() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-colors"
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium whitespace-nowrap transition-colors"
         style={{
           background: 'var(--tag-bg)',
           color: 'var(--tag-text)',
