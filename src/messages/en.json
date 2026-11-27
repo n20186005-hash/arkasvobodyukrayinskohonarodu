@@ -16,6 +16,8 @@
   "rating": "4.6",
   "reviewCount": "28,735",
   "ratingSource": "Google Maps",
+  "photoNote": "Site-archive photograph; capture date unknown. The sculpture groups shown have since been removed.",
+  "ratingNote": "User-provided Google Maps snapshot, recorded 26 November 2026; original collection date unavailable. This is not a live rating.",
   "hours": "Check current access and safety notices before visiting",
   "openMaps": "View Location"
  },
@@ -385,9 +387,9 @@
   ],
   "quote1": "It was not built as a monument to a friendship between equals: it opened in the early 1980s within the commemorative context of the USSR’s 60th anniversary, promoting the official “friendship of Soviet peoples” narrative of that era.",
   "quote2": "The 2022 renaming did not erase history — it renamed it. The arch turned from celebrating the old union toward marking the freedom of the Ukrainian people.",
-  "fig1Caption": "Today's view: the silver arch on the high right bank of the Dnipro",
-  "fig2Caption": "Structural detail: titanium-alloy cladding over the metal framework (recent site-archive photo)",
-  "photoNote": "Photos in this section are recent site-archive images shown to explain the current look and location; they are not historical photos. Notes about archival image rights appear in the “Timeline & old photos” block below."
+  "fig1Caption": "Site-archive view of the arch and Dnipro right bank",
+  "fig2Caption": "Site-archive view of the arch and square before the sculpture groups were removed",
+  "photoNote": "These original site photographs are retained as archive images. Their capture dates are unknown; sculpture groups visible in older views have since been removed."
  },
  "faq": {
   "title": "Frequently Asked Questions",
@@ -533,7 +535,7 @@
  },
  "services": {
   "title": "Visitor Services & Nearby Facilities",
-  "subtitle": "This nonprofit science website lists facility types only as a neutral overview. We do not recommend or rank any specific business or brand — please confirm details on site.",
+  "subtitle": "Plan water, meals, rest stops and accommodation before your visit. Use the official city and transport links below for current information.",
   "items": [
    {
     "icon": "wc",
@@ -650,7 +652,7 @@
  "audiences": {
   "title": "Visit Plans by Traveller Type",
   "lead": "Choose a plan that suits your group and pace. Check current safety and access before setting out.",
-  "note": "These are free, non-commercial suggestions prepared by this site; no agency or paid service is involved.",
+  "note": "Suggested durations are editorial planning estimates; adapt them to your group and current access.",
   "items": [
    {
     "type": "Families with children",
@@ -751,7 +753,7 @@
   "lead": "A chronology of how the monument’s identity changed — based on resolutions and public records.",
   "sourceNote": "Compiled from Resolution No. 597 of the Council of Ministers of the Ukrainian SSR (28 Dec 1979), the Kyiv City Council decision of 14 May 2022, and public reporting by Ukrinform, Radio Svoboda and others.",
   "oldPhotoTitle": "A note on “old photos”",
-  "oldPhotoText": "Historical images from 1982 onwards mostly live in Ukrainian state archives and news-agency libraries under copyright. To avoid unauthorised reuse we do not repost them here; instead we rely on the resolution texts, official records and verifiable reporting listed at the bottom of this page.",
+  "oldPhotoText": "The gallery retains the site’s original photographs, whose capture dates are not documented. The timeline uses the public records linked in Sources.",
   "items": [
    {
     "year": "1979",

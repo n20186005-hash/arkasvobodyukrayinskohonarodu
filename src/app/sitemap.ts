@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['uk', 'ru', 'zh', 'en'];
   const routes = ['', '/privacy-policy', '/terms-of-service', '/cookie-settings', '/places', ...places.map(p => `/places/${p.slug}`)];
   // 固定构建日期，避免每次构建漂移
-  const lastModified = new Date('2026-09-09');
+  const lastModified = new Date('2026-11-27');
 
   const sitemap: MetadataRoute.Sitemap = [];
 
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       };
       sitemap.push({
         url,
-        ...(route.startsWith('/places') ? {} : { lastModified }),
+        ...(route === '' ? { lastModified } : {}),
         changeFrequency: route === '' ? 'weekly' : 'monthly',
         priority: route === '' ? 1 : 0.5,
         alternates,

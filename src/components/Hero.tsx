@@ -27,6 +27,9 @@ export default function Hero() {
             {t('subtitle')}
           </p>
 
+          <p className="text-white/80 text-xs leading-relaxed mb-4 max-w-2xl">{t('ratingNote')}</p>
+          <p className="text-white/80 text-xs leading-relaxed mb-4 max-w-2xl">{t('photoNote')}</p>
+
           {/* Meta row */}
           <div className="flex flex-wrap items-center gap-4 mb-8 animate-fade-in-up animation-delay-200">
             <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-4 py-2">
