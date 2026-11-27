@@ -25,6 +25,7 @@ import FaqSection from '@/components/FaqSection';
 import PrintSection from '@/components/PrintSection';
 import SourcesSection from '@/components/SourcesSection';
 import Footer from '@/components/Footer';
+import HomeStructuredData from '@/components/HomeStructuredData';
 
 export default async function HomePage({
   params,
@@ -98,6 +99,7 @@ export default async function HomePage({
 
   return (
     <>
+      <HomeStructuredData locale={locale} messages={messages} />
       <Header />
       <main>
         <Hero />

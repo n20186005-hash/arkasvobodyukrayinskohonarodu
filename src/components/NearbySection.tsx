@@ -1,8 +1,9 @@
-import { useTranslations, useMessages } from 'next-intl';
+import { useTranslations, useMessages, useLocale } from 'next-intl';
 import RichText from './RichText';
 
 export default function NearbySection() {
   const t = useTranslations('nearby');
+  const locale = useLocale();
   const messages = useMessages() as any;
   const items: Array<{ name: string; desc: string }> = messages?.nearby?.items || [];
 
@@ -21,6 +22,10 @@ export default function NearbySection() {
         <p className="text-lg leading-relaxed mb-10" style={{ color: 'var(--text-secondary)' }}>
           <RichText text={t('lead')} />
         </p>
+
+        <a href={`/${locale}/places`} className="inline-block mb-8 underline" style={{ color: 'var(--accent)' }}>
+          {locale === 'uk' ? 'Переглянути місця поруч' : locale === 'ru' ? 'Посмотреть места рядом' : locale === 'zh' ? '查看周边景点' : 'Explore nearby places'}
+        </a>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {items.map((item, i) => (

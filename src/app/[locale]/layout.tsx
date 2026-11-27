@@ -3,7 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
-import { SITE, LEGACY_NAMES, ogImageUrl, ogImageAlt, Locale, localeHomeUrls } from '@/lib/seo';
+import { SITE, ogImageUrl, ogImageAlt, Locale, localeHomeUrls } from '@/lib/seo';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -111,47 +111,6 @@ export default async function LocaleLayout({
     uk: 'uk-UA',
   };
 
-  const selfUrl = localeHomeUrls[locale as Locale];
-
-  // —— 结构化数据：TouristAttraction（实体锚定，含 @id / image / geo）——
-  // 注意：4.6 / 28,735 为 Google Maps 同步数据，并非本站自产评价，
-  // 按 Google 结构化数据政策不写入 aggregateRating，仅在页面展示中标注来源。
-  const attractionJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'TouristAttraction',
-    '@id': `${SITE.baseUrl}/#attraction`,
-    name: SITE.fullName,
-    alternateName: [
-      SITE.shortName,
-      SITE.ukName,
-      LEGACY_NAMES.en,
-      LEGACY_NAMES.uk,
-      LEGACY_NAMES.ru,
-      `${SITE.city} ${SITE.fullName}`,
-    ],
-    description: messages?.meta?.description || SITE.description,
-    url: selfUrl,
-    image: [ogImageUrl],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE.address,
-      addressLocality: SITE.city,
-      addressRegion: SITE.region,
-      postalCode: SITE.postalCode,
-      addressCountry: SITE.countryCode,
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: SITE.lat,
-      longitude: SITE.lng,
-    },
-    hasMap: SITE.mapsShareUrl,
-    sameAs: [
-      SITE.mapsShareUrl,
-      SITE.wikipediaUrl,
-    ],
-  };
-
   // —— 结构化数据：Organization（站点实体，供 WebSite.publisher / WebPage 引用）——
   const organizationJsonLd = {
     '@context': 'https://schema.org',
@@ -166,24 +125,6 @@ export default async function LocaleLayout({
     },
   };
 
-  // —— 结构化数据：FAQPage（与页面 FAQ 板块一一对应）——
-  const faqItems: Array<{ q?: string; a?: string }> =
-    Array.isArray(messages?.faq?.items) ? messages.faq.items : [];
-  const faqJsonLd =
-    faqItems.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqItems.map((item) => ({
-            '@type': 'Question',
-            name: item.q,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.a,
-            },
-          })),
-        }
-      : null;
 
   return (
     <html lang={langMap[locale] || 'zh-CN'} suppressHydrationWarning>
@@ -249,16 +190,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(attractionJsonLd) }}
-        />
-        {faqJsonLd && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-          />
-        )}
+
       </head>
       <body className="min-h-screen">
         <NextIntlClientProvider messages={messages}>

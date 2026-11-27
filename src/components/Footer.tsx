@@ -39,6 +39,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-wrap gap-4 text-sm mt-4 sm:mt-0">
+            <a href={`${prefix}/places`} style={{ color: 'var(--text-secondary)' }} className="hover:underline">
+              {locale === 'uk' ? 'Місця поруч' : locale === 'ru' ? 'Места рядом' : locale === 'zh' ? '周边景点' : 'Nearby places'}
+            </a>
             <a href={`${prefix}/privacy-policy`} style={{ color: 'var(--text-secondary)' }} className="hover:underline">
               {t('privacy')}
             </a>
