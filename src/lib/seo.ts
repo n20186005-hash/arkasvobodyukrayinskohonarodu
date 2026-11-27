@@ -13,7 +13,7 @@ export const SITE = {
   ukName: 'Арка Свободи українського народу',
   shortName: "People's Freedom Arch",
   description:
-    'Comprehensive visitor guide to Arka Svobody Ukrayinsʹkoho Narodu in Kyiv, Ukraine. A huge rainbow-shaped arch with a riverfront deck built in 1982, now known as the People’s Freedom Arch.',
+    'Comprehensive visitor guide to Arka Svobody Ukrayinsʹkoho Narodu in Kyiv, Ukraine. A huge rainbow-shaped arch with a riverfront deck built in the early 1980s, now known as the People’s Freedom Arch.',
 
   // 地理归属
   city: 'Kyiv',
@@ -46,7 +46,7 @@ export const SITE = {
 
 export type SiteInfo = typeof SITE;
 
-/** 历史曾用名（1982–2022 年旧称），用于 JSON-LD alternateName 与正文语境 */
+/** 历史曾用名（20 世纪 80 年代至 2022 年旧称），用于 JSON-LD alternateName 与正文语境 */
 export const LEGACY_NAMES = {
   en: "People's Friendship Arch",
   uk: 'Арка дружби народів',

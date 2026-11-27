@@ -1,6 +1,6 @@
 # Cloudflare Workers 部署配置
 # 前置步骤：npm run build（生成 out/ 静态产物），随后 npx wrangler deploy
-name = "arka-svobody"
+name = "arkasvobodyukrayinskohonarodu"
 main = "worker/index.js"
 compatibility_date = "2026-06-01"
 

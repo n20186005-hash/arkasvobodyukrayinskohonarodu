@@ -11,7 +11,7 @@
     "deploy:cf": "npm run build && npx --yes wrangler deploy"
   },
   "dependencies": {
-    "next": "^15.1.0",
+    "next": "16.4.6",
     "next-intl": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -23,5 +23,9 @@
     "@types/react-dom": "^19.0.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^5.7.0"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "@swc/core@1.16.22": true
   }
 }

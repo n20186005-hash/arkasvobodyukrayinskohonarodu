@@ -132,7 +132,6 @@ export default async function LocaleLayout({
     description: messages?.meta?.description || SITE.description,
     url: selfUrl,
     image: [ogImageUrl],
-    isAccessibleForFree: true,
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.address,
@@ -147,25 +146,8 @@ export default async function LocaleLayout({
       longitude: SITE.lng,
     },
     hasMap: SITE.mapsShareUrl,
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '00:00',
-      closes: '23:59',
-    },
     sameAs: [
       SITE.mapsShareUrl,
-      SITE.officialTourismUrl,
-      SITE.kyivCityUrl,
-      SITE.kyivGuideUrl,
       SITE.wikipediaUrl,
     ],
   };
@@ -182,7 +164,6 @@ export default async function LocaleLayout({
       '@type': 'ImageObject',
       url: `${SITE.baseUrl}/icons/icon-512.png`,
     },
-    sameAs: [SITE.mapsShareUrl, SITE.officialTourismUrl, SITE.kyivCityUrl],
   };
 
   // —— 结构化数据：FAQPage（与页面 FAQ 板块一一对应）——

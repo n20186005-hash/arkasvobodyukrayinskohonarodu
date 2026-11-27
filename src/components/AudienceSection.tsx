@@ -10,7 +10,7 @@ export default function AudienceSection() {
     <section id="audiences" className="section-padding" style={{ background: 'var(--bg-secondary)' }}>
       <div className="max-w-5xl mx-auto">
         <h2
-          className="font-display text-3xl sm:text-4xl font-semibold mb-2"
+          className="font-display text-3xl sm:text-4xl font-semibold mb-2 break-words"
           style={{ color: 'var(--text-primary)' }}
         >
           {t('title')}

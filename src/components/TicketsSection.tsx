@@ -24,7 +24,7 @@ export default function TicketsSection() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center"
+                className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center"
                 style={{ background: 'var(--accent)' }}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
@@ -48,7 +48,7 @@ export default function TicketsSection() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div
-                className="w-12 h-12 rounded-full flex items-center justify-center"
+                className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center"
                 style={{ background: 'var(--accent)' }}
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
@@ -56,7 +56,7 @@ export default function TicketsSection() {
                   <circle cx="12" cy="8" r="3"/>
                 </svg>
               </div>
-              <h3 className="font-display text-xl font-semibold" style={{ color: 'var(--text-primary)' }}>
+              <h3 className="min-w-0 break-words font-display text-xl font-semibold" style={{ color: 'var(--text-primary)' }}>
                 {t('lighthouse')}
               </h3>
             </div>
@@ -89,7 +89,7 @@ export default function TicketsSection() {
 
 function PriceRow({ label, value, isFree = false }: { label: string; value: string; isFree?: boolean }) {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 sm:gap-3">
       <span style={{ color: 'var(--text-secondary)' }}>{label}</span>
       <span className="font-semibold" style={{ color: isFree ? 'var(--accent)' : 'var(--text-primary)' }}>
         {value}

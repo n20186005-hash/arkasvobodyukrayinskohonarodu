@@ -33,7 +33,7 @@ export default function RouteSection() {
                   {item.label}
                 </h3>
                 <span
-                  className="text-xs px-3 py-1 rounded-full whitespace-nowrap"
+                  className="text-xs px-3 py-1 rounded-full max-w-full break-words"
                   style={{ background: 'var(--accent)', color: '#fff' }}
                 >
                   {item.time}
