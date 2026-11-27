@@ -25,6 +25,14 @@ export default {
     }
     if (canonical.href !== url.href) return Response.redirect(canonical.href, 308);
 
+    // Error-page aliases must retain an actual 404 status, including direct visits.
+    if (/^\/(?:404|_not-found)(?:\.html)?\/?$/.test(url.pathname)) {
+      const page = await env.ASSETS.fetch(new Request(new URL('/404', url), request));
+      const headers = new Headers(page.headers);
+      headers.set('X-Robots-Tag', 'noindex');
+      return new Response(page.body, { status: 404, headers });
+    }
+
     // 天气代理接口
     if (url.pathname === '/api/weather' && request.method === 'GET') {
       return proxyWeather(request);
