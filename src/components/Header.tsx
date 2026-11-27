@@ -29,7 +29,7 @@ export default function Header() {
       }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href={homeHref} className="min-w-0 font-display text-lg font-semibold tracking-tight" style={{ color: scrolled ? 'var(--text-primary)' : '#fff' }}>
+        <a href={homeHref} className="min-w-0 font-display text-lg font-semibold tracking-tight [overflow-wrap:anywhere]" style={{ color: scrolled ? 'var(--text-primary)' : '#fff' }}>
           Arka Svobody Ukrayinsʹkoho Narodu
         </a>
 
